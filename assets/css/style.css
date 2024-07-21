@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color : #5798b0;
+    --main-color-rgb : 87, 152, 176;
+    --font-color : #454545;
+    --font-color-rgb : 69, 69, 69;
+    --fs : 16px;
+    --fw : 600;
+    --heading-font-family : 'Playfair Display',serif; 
+    --normal-font-family : 'Open Sans',sans-serif; 
+    --white : #ffffff;
+    --white-rgb : 255, 255, 255;
+}
+body{
+    color: var(--font-color);
+    font-size: var(--fs);
+    font-weight: var(--fw);
+    font-family: var(--normal-font-family);
+}
+ul,ol{
+    list-style: none;
+    padding: 0;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
