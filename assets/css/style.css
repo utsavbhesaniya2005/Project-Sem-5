@@ -8,10 +8,16 @@
     --font-color: #454545;
     --font-color-rgb: 69, 69, 69;
     --fs: 18px;
-    --fw: 600;
+    --fw: 400;
     --heading-font-family: 'Playfair Display', serif;
     --normal-font-family: 'Open Sans', sans-serif;
-    --other-ff : 'Playfair Display', serif;
+    --other-font-family : 'Lora', serif;
+    --heading-color : #3e606b;
+    --heading-color-rgb : 62, 96, 107;
+    --normal-color-1 : #242424;
+    --normal-color-1-rgb : 36, 36, 36;
+    --normal-color-2 : #797979;
+    --normal-color-2-rgb : 121, 121, 121;
     --white: #ffffff;
     --white-rgb: 255, 255, 255;
 }
@@ -33,15 +39,30 @@ a{
 hr{
     margin: 0;
 }
+.py-100{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.pt-100{
+    padding-top: 100px;
+}
+.pb-100{
+    padding-bottom: 100px;
+}
+.px-50{
+    padding-left: 50px;
+    padding-right: 50px;
+}
 .btn-1{
     display: inline-block;
     padding: 0 43px;
     background-color: var(--white);
     line-height: 52px;
     font-size: 18px;
-    color: #3e606b;
+    color: var(--heading-color);
     font-family: var(--normal-font-family);
     border-radius: 26px;
+    font-weight: 600;
 }
 
 /* Header */
@@ -97,6 +118,7 @@ nav>ul>li>a.nav-link{
     color: var(--font-color);
     padding: 0;
     padding-right: 40px;
+    font-weight: 600;
     transition: all 0.3s linear;
 }
 nav ul li a.nav-link::before{
@@ -247,4 +269,150 @@ nav>ul>li.dropdown:first-child>a:hover::after{
 .slider-text p{
     width: 55%;
     margin-bottom: 30px;
+}
+
+/* Welcome Start */
+.welcome{
+    background-image: url(../images/welcome/welcome-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 165vh;
+    z-index: 0;
+}
+.welcome::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-image: url(../images/welcome/left-shape.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 100vh;
+    width: 100%;
+}
+.welcome::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    background-image: url(../images/welcome/right-shape.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+}
+.main-title{
+    color: var(--heading-color);
+    font-size: 38px;
+    padding-bottom: 15px;
+    font-weight: 700;
+    margin: 0;
+    font-family: var(--heading-font-family);
+    position: relative;
+    display: inline-block;
+}
+.main-title::after{
+    position: absolute;
+    content: '';
+    right: -60px;
+    bottom: 20px;
+    background-color: #acb2b4;
+    height: 1px;
+    width: 45px;
+}
+.welcome-text h6,  .feature-left h5{
+    color: var(--normal-color-1);
+    font-size: 20px;
+    font-family: var(--other-font-family);
+    line-height: 30px;
+}   
+.welcome-text p{
+    font-size: 16px;
+    color: var(--normal-color-2);
+}
+.welcome-text a{
+    background-color: var(--main-color);
+    color: var(--white);
+}
+.angle-button{
+    position: relative;
+}
+.left-angle, .right-angle{
+    height: 40px;
+    width: 40px;
+    border: 2px solid #d0d0d0;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.3s linear;
+}
+.left-angle{
+    left: 40%;
+}
+.right-angle{
+    margin-left: -30px;
+}
+.left-angle:hover, .right-angle:hover{
+    color: var(--white);
+    background-color: var(--main-color);
+}
+.feature-left h5{
+    color: var(--normal-color-2);
+}
+.card{
+    border: none;
+    box-shadow: 0px 0px 15px 0px rgba(40, 40, 40, 0.08);
+}
+.card-body{
+    position: relative;
+}
+.card-body h4{
+    position: absolute;
+    left: 25%;
+    top: 0;
+    transform: translate(50%,  -50%);
+    font-family: var(--heading-font-family);
+    font-weight: 400;
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+    text-align: center;
+    background-color: var(--white);
+    border-radius: 50%;
+    color: #343434;
+}
+.card .card-body h5{
+    font-family: var(--heading-font-family);
+    color: #343434;
+    font-size: 18px;
+    font-weight: lighter;
+    padding-bottom: 15px;
+    padding-top: 25px;
+}
+.card .card-body a{
+    padding: 5px 20px;
+    border-radius: 3px;
+    position: relative;
+}
+.card .card-body a::after{
+    content: '';
+    position: absolute;
+    height: 155px;
+    width: 50px;
+    background-color: var(--white);
+    opacity: 0.2;
+    top: -50px;
+    left: -75px;
+    transform: rotate(35deg);
+    transition: all 0.3s linear;
+}
+.card .card-body a:hover::after{
+    left: 120%;
+    transition: all 0.3s linear;  
 }
