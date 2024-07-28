@@ -66,6 +66,25 @@ h1, h2, h3, h4, h5, h6{
     font-family: var(--normal-font-family);
     border-radius: 26px;
     font-weight: 600;
+    overflow: hidden;
+    transition: all 0.2s linear;
+    position: relative;
+}
+.btn-1::after, .card .card-body a::after{
+    content: '';
+    position: absolute;
+    height: 155px;
+    width: 50px;
+    background-color: var(--white);
+    opacity: 0.2;
+    top: -50px;
+    left: -75px;
+    transform: rotate(35deg);
+    transition: all 0.3s linear;
+}
+.btn-1:hover::after, .card .card-body a:hover::after{
+    left: 120%;
+    transition: all 0.3s linear;  
 }
 
 /* Header */
@@ -273,6 +292,15 @@ nav>ul>li.dropdown:first-child>a:hover::after{
     width: 55%;
     margin-bottom: 30px;
 }
+.slider-text a{
+    transition: all 0.3s linear;
+}
+.slider-text a::after{
+    background-color: var(--main-color);
+}
+.slider-text a:hover{   
+    color: var(--main-color);
+}
 
 /* Welcome Start */
 .welcome{
@@ -383,6 +411,18 @@ nav>ul>li.dropdown:first-child>a:hover::after{
 .card{
     border: none;
     box-shadow: 0px 0px 15px 0px rgba(40, 40, 40, 0.08);
+    overflow: hidden;
+}
+.card-img{
+    height: 240px;
+    overflow: hidden;   
+}
+.card img{
+    transition: all 0.2s linear;
+}
+.card img:hover{
+    transform: scale(1.05);
+    filter: brightness(60%);
 }
 .card-body{
     position: relative;
@@ -411,23 +451,8 @@ nav>ul>li.dropdown:first-child>a:hover::after{
 .card .card-body a{
     padding: 5px 20px;
     border-radius: 3px;
+    overflow: hidden;
     position: relative;
-}
-.card .card-body a::after{
-    content: '';
-    position: absolute;
-    height: 155px;
-    width: 50px;
-    background-color: var(--white);
-    opacity: 0.2;
-    top: -50px;
-    left: -75px;
-    transform: rotate(35deg);
-    transition: all 0.3s linear;
-}
-.card .card-body a:hover::after{
-    left: 120%;
-    transition: all 0.3s linear;  
 }
 
 /* Special Recipe */
@@ -436,10 +461,11 @@ nav>ul>li.dropdown:first-child>a:hover::after{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 500px;
+    height: 450px;
     background-attachment: fixed;
 }
 .recipe-img{
+    padding-left: 50px;
     padding-right: 150px;
 }
 .recipe-desc{
@@ -455,6 +481,73 @@ nav>ul>li.dropdown:first-child>a:hover::after{
 .recipe-desc p{
     color: var(--white);
     font-weight: 500;
-    max-width: 79%;
+    max-width: 89%;
     margin-bottom: 32px;
+}
+.recipe-desc a{
+    color: var(--normal-color-1);
+    overflow: hidden;
+}
+.recipe-desc a::after{
+    background-color: var(--main-color);
+}
+.recipe-desc a:hover{
+    color: var(--main-color);
+}
+
+/* Recipe slider */
+.swiper-pagination-vertical.swiper-pagination-bullets{
+    left: 98%;
+    top: 50%;
+    transform: translate(0, -50%, 0);
+}
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 12px;
+}
+.swiper-pagination-bullet{
+    height: 12px;
+    width: 12px;
+    border: 1px solid var(--white);
+    opacity: 1;
+    background-color: transparent;
+}
+.swiper-pagination-bullet-active{
+    background-color: var(--white);
+}
+
+/* Service */
+.service{
+    background-image: url(../images/home/services/service-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    padding: 100px;
+    position: relative;
+}
+.service-title{
+    text-align: center;
+    padding-bottom: 50px;
+}
+.service-title h2{
+    color: var(--white);
+}
+.service-title h2::after{
+    background-color: var(--white);
+    left: 45%;
+    top: 90%;
+}
+.service-icon img{
+    height: 70px;
+    width: 70px;    
+}
+.service-text{
+    color: var(--white);
+}
+.service-text h4{
+    margin: 20px 0 15px 0;
+}
+.service-text p{
+    font-size: 16px;
+    font-family: var(--normal-font-family);
+    width: 75%;
 }
