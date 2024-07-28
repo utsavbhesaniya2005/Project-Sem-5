@@ -1,246 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Cake - Bakery</title>
-    <link rel="shortcut icon" href="./assets/images/logo/fav-icon.png" type="image/x-icon">
+        <title>Cake - Bakery</title>
+        <link rel="shortcut icon" href="./assets/images/logo/fav-icon.png" type="image/x-icon">
 
-    <!-- fonts -->
-    <link rel="stylesheet" href="./assets/css/font.css">
+        <!-- fonts -->
+        <link rel="stylesheet" href="./assets/css/font.css">
 
-    <!-- font awesome -->
-     <link rel="stylesheet" href="./assets/css/all.min.css">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="./assets/css/all.min.css">
 
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+        <!-- Slider Css -->
+        <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
 
-    <!-- Css -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 
-</head>
+        <!-- Css -->
+        <link rel="stylesheet" href="./assets/css/style.css">
 
-<body>
+    </head>
 
-    <!-- Header  -->
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="logo">
-                        <a href="#">
-                            <img src="./assets/images/logo/logo.png" alt="Logo">
-                        </a>
-                    </div>
-                    <nav class="navbar navbar-expand-lg">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <ul class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Our Cakes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Menu</a>
-                            </li>
-                            <li class="dropdown">
-                                <a class="nav-link" href="#">About Us</a>
-                                <ul class="dropdown-menu-1">
-                                    <hr>
-                                    <li>
-                                        <a class="dropdown-item" href="#">Our Chefs</a>
-                                    </li>
-                                    <hr>
-                                    <li>
-                                        <a class="dropdown-item" href="#">Testimonials</a>
-                                    </li>
-                                    <hr>
-                                </ul>
-                            </li>
-                        </ul>
+    <body>
 
-                        <ul class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                            <li class="nav-item ms-auto">
-                                <a class="nav-link" href="#">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Shop</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact Us</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main -->
-    <main>
-
-        <!-- Banner -->
-        <section class="banner">
-            <div id="carouselExampleFade" class="carousel Z-n1 slide carousel-fade">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="slider-1">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="slider-text">
-                                            <h1>Quality Cake ... <br>  with sweet, eggs & breads
-                                            </h1>
-                                            <p>
-                                                <i>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit quia consequuntur magni dolores eos qui ratione</i>
-                                            </p>
-                                            <a class="btn-1" href="#">See the recipe</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="slider-2">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="slider-text">
-                                            <h1>Cake Bakery ... <br>  make delicious products
-                                            </h1>
-                                            <p>
-                                                <i>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit quia consequuntur magni dolores eos qui ratione</i>
-                                            </p>
-                                            <a class="btn-1" href="#">See the recipe</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                    <a href="#" class="position-absolute left-btn">
-                        <i class="fa-solid fa-angle-left"></i>
-                    </a>
-                </div>
-                <div class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                    <a href="#" class="position-absolute right-btn">
-                        <i class="fa-solid fa-angle-right"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-        
-        <section class="welcome position-relative py-100">
+        <!-- Header  -->
+        <header>
             <div class="container">
-                <div class="welcome-inner pb-100 px-50">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="welcome-text">
-                                <h2 class="main-title">Welcome to our Bakery</h2>
-                                <h6 class="pb-3">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur uis autem vel eum.</h6>
-                                <p class="pb-3">Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise.</p>
-                                <a href="#" class="btn-1">Know more about us</a>
-                            </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="./assets/images/home/logo/logo.png" alt="Logo">
+                            </a>
                         </div>
-                        <div class="col-6">
-                            <div class="welcome-img d-flex justify-content-end">
-                                <img src="./assets/images/welcome/welcome.png" alt="Welcome-Image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <hr>
+                        <nav class="navbar navbar-expand-lg">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <ul class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Our Products</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Menu</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="nav-link" href="#">About Us</a>
+                                    <ul class="dropdown-menu-1">
+                                        <hr>
+                                        <li>
+                                            <a class="dropdown-item" href="#">About Us</a>
+                                        </li>
+                                        <hr>
+                                        <li>
+                                            <a class="dropdown-item" href="#">Our Chefs</a>
+                                        </li>
+                                        <hr>
+                                    </ul>
+                                </li>
+                            </ul>
 
-                <div class="features pt-100 px-50">
-                    <div class="row pb-5 align-items-center">
-                        <div class="col-10">
-                            <div class="feature-left">
-                                <h2 class="main-title">Our Featured Cakes</h2>
-                                <h5>Seldolor sit amet consect etur</h5>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="angle-button d-flex justify-content-evenly">
-                                <div class="left-angle">
-                                    <i class="fa-solid fa-angle-left"></i>
-                                </div>
-                                <div class="right-angle">
-                                    <i class="fa-solid fa-angle-right"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="card pb-3" style="width: 18rem;">
-                                <img src="./assets/images/features-cake/feature-cake-1.png" class="card-img-top" alt="feature-cake-1">
-                                <div class="card-body text-center">
-                                    <h4><i>$29</i></h4>
-                                    <h5 class="card-title">Pista Cupcakes</h5>
-                                    <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card pb-3" style="width: 18rem;">
-                                <img src="./assets/images/features-cake/feature-cake-2.png" class="card-img-top" alt="feature-cake-2">
-                                <div class="card-body text-center">
-                                    <h4><i>$29</i></h4>
-                                    <h5 class="card-title">Chocolate Cakes</h5>
-                                    <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card pb-3" style="width: 18rem;">
-                                <img src="./assets/images/features-cake/feature-cake-3.png" class="card-img-top" alt="feature-cake-3">
-                                <div class="card-body text-center">
-                                    <h4><i>$29</i></h4>
-                                    <h5 class="card-title">Chocolate Cupcakes</h5>
-                                    <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card pb-3" style="width: 18rem;">
-                                <img src="./assets/images/features-cake/feature-cake-4.png" class="card-img-top" alt="feature-cake-4">
-                                <div class="card-body text-center">
-                                    <h4><i>$29</i></h4>
-                                    <h5 class="card-title">Strawberry Cupcakes</h5>
-                                    <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
+                            <ul class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                                <li class="nav-item ms-auto">
+                                    <a class="nav-link" href="#">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Shop</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Log In</a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
-        </section>
+        </header>
 
-    </main>
+        <!-- Main -->
+        <main>
 
-
-    <!-- Bootstrap js -->
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Jquery -->
-    <script src="./assets/js/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
+            <!-- Banner -->
+            <section class="banner">
+                <div id="carouselExampleFade" class="carousel Z-n1 slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="slider-1">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="slider-text">
+                                                <h1>Quality Cake ... <br>  with sweet, eggs & breads
+                                                </h1>
+                                                <p>
+                                                    <i>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit quia consequuntur magni dolores eos qui ratione</i>
+                                                </p>
+                                                <a class="btn-1" href="#">See the recipe</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                                    <a href="#" class="position-absolute left-btn">
+                                        <div class="small-bg-left"></div>
+                                        <i class="fa-solid fa-angle-left"></i>
+                                    </a>
+                                </div>
+                                <div class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                                    <a href="#" class="position-absolute right-btn">
+                                        <div class="small-bg-right"></div>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="slider-2">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="slider-text">
+                                                <h1>Cake Bakery ... <br>  make delicious products
+                                                </h1>
+                                                <p>
+                                                    <i>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit quia consequuntur magni dolores eos qui ratione</i>
+                                                </p>
+                                                <a class="btn-1" href="#">See the recipe</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                                    <a href="#" class="position-absolute left-btn">
+                                        <div class="small-bg-left"></div>
+                                        <i class="fa-solid fa-angle-left"></i>
+                                    </a>
+                                </div>
+                                <div class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                                    <a href="#" class="position-absolute right-btn">
+                                        <div class="small-bg-right"></div>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             
-        });
-    </script>
-</body>
+            <!-- Welcome -->
+            <section class="welcome position-relative pt-100">
+                <div class="container">
+                    <div class="welcome-inner pb-100">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="welcome-text">
+                                    <h2 class="main-title">Welcome to our Bakery</h2>
+                                    <h6 class="pb-3">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur uis autem vel eum.</h6>
+                                    <p class="pb-3">Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise.</p>
+                                    <a href="#" class="btn-1">Know more about us</a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="welcome-img d-flex justify-content-end">
+                                    <img src="./assets/images/home/welcome/welcome.png" alt="Welcome-Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                </div>
+            </section>
 
+            <!-- Features -->
+            <section class="feature">
+                <div class="container">
+                    <div class="features px-5">
+                        <div class="row pb-5 align-items-center">
+                            <div class="col-10">
+                                <div class="feature-left">
+                                    <h2 class="main-title">Our Featured Cakes</h2>
+                                    <h5>Seldolor sit amet consect etur</h5>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="angle-button d-flex justify-content-evenly">
+                                    <div class="left-angle swiper-button-prev">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                    </div>
+                                    <div class="right-angle swiper-button-next">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Slider main container -->
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="card pb-3" style="width: 18rem;">
+                                            <img src="./assets/images/home/features-cake/feature-cake-1.png" class="card-img-top" alt="feature-cake-1">
+                                            <div class="card-body text-center">
+                                                <h4><i>$29</i></h4>
+                                                <h5 class="card-title">Pista Cupcakes</h5>
+                                                <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card pb-3" style="width: 18rem;">
+                                            <img src="./assets/images/home/features-cake/feature-cake-2.png" class="card-img-top" alt="feature-cake-2">
+                                            <div class="card-body text-center">
+                                                <h4><i>$29</i></h4>
+                                                <h5 class="card-title">Chocolate Cakes</h5>
+                                                <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card pb-3" style="width: 18rem;">
+                                            <img src="./assets/images/home/features-cake/feature-cake-3.png" class="card-img-top" alt="feature-cake-3">
+                                            <div class="card-body text-center">
+                                                <h4><i>$29</i></h4>
+                                                <h5 class="card-title">Chocolate Cupcakes</h5>
+                                                <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card pb-3" style="width: 18rem;">
+                                            <img src="./assets/images/home/features-cake/feature-cake-4.png" class="card-img-top" alt="feature-cake-4">
+                                            <div class="card-body text-center">
+                                                <h4><i>$29</i></h4>
+                                                <h5 class="card-title">Strawberry Cupcakes</h5>
+                                                <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card pb-3" style="width: 18rem;">
+                                            <img src="./assets/images/home/features-cake/feature-cake-1.png" class="card-img-top" alt="feature-cake-1">
+                                            <div class="card-body text-center">
+                                                <h4><i>$29</i></h4>
+                                                <h5 class="card-title">Pista Cupcakes</h5>
+                                                <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card pb-3" style="width: 18rem;">
+                                            <img src="./assets/images/home/features-cake/feature-cake-2.png" class="card-img-top" alt="feature-cake-2">
+                                            <div class="card-body text-center">
+                                                <h4><i>$29</i></h4>
+                                                <h5 class="card-title">Chocolate Cakes</h5>
+                                                <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card pb-3" style="width: 18rem;">
+                                            <img src="./assets/images/home/features-cake/feature-cake-3.png" class="card-img-top" alt="feature-cake-3">
+                                            <div class="card-body text-center">
+                                                <h4><i>$29</i></h4>
+                                                <h5 class="card-title">Chocolate Cupcakes</h5>
+                                                <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card pb-3" style="width: 18rem;">
+                                            <img src="./assets/images/home/features-cake/feature-cake-4.png" class="card-img-top" alt="feature-cake-4">
+                                            <div class="card-body text-center">
+                                                <h4><i>$29</i></h4>
+                                                <h5 class="card-title">Strawberry Cupcakes</h5>
+                                                <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Special Recipe -->
+            <section class="s-recipe d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="recipe d-flex align-items-center justify-content-center">
+                            <div class="recipe-img d-flex align-items-center">
+                                <a href="#">
+                                    <img src="./assets/images/home/recipies/recipe-1.png" alt="recipe-1">
+                                </a>
+                            </div>
+                            <div class="recipe-desc">
+                                <h1>Special Recipe</h1>
+                                <p><i>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi equatur uis autem vel eum.</i></p>
+                                <a class="btn-1" href="#">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+
+
+        <!-- Bootstrap js -->
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Jquery -->
+        <script src="./assets/js/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                
+            });
+        </script>
+
+        <!-- Slider Js -->
+        <script src="./assets/js/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper', {
+                   // Optional parameters
+                   direction: 'horizontal',
+                   loop: true,
+                   slidesPerView: 4,
+                   spaceBetween: 30,
+                   autoplay: true,
+
+                   // Navigation arrows
+                   navigation: {
+                       nextEl: '.swiper-button-next',
+                       prevEl: '.swiper-button-prev',
+                   },
+
+               });
+       </script>    
+
+
+    </body>
 </html>

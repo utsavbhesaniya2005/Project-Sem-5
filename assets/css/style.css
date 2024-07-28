@@ -39,6 +39,9 @@ a{
 hr{
     margin: 0;
 }
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--heading-font-family);
+}
 .py-100{
     padding-top: 100px;
     padding-bottom: 100px;
@@ -73,7 +76,7 @@ header{
 header::after{
     position: absolute;
     content: '';
-    background-image: url(../images/logo/header-shape-2.png);
+    background-image: url(../images/home/logo/header-shape-2.png);
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
@@ -91,7 +94,7 @@ header::after{
 }
 .logo a::before{
     content: '';
-    background-image: url(../images/logo/header-shape-1.png);
+    background-image: url(../images/home/logo/header-shape-1.png);
     background-position: center;
     background-repeat: no-repeat;
     height: 210px;
@@ -201,14 +204,14 @@ nav>ul>li.dropdown:first-child>a:hover::after{
 }
 .carousel-item .slider-1,
 .carousel-item .slider-2{
-    background-image: url(../images/banner/slider-1.png);
+    background-image: url(../images/home/banner/slider-1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 85vh;
 }
 .carousel-item .slider-2{
-    background-image: url(../images/banner/slider-2.png);
+    background-image: url(../images/home/banner/slider-2.png);
 }
 .carousel-control-prev,
 .carousel-control-next{
@@ -229,11 +232,12 @@ nav>ul>li.dropdown:first-child>a:hover::after{
     overflow: hidden;
     position: relative;
 }
-.left-btn::after,
-.right-btn::after{
+.slider-1 .left-btn .small-bg-left,
+.slider-1 .right-btn .small-bg-right, .slider-2 .left-btn .small-bg-left,
+.slider-2 .right-btn .small-bg-right{
     content: '';
     position: absolute;
-    background-image: url(../images/banner/slider-2.png);
+    background-image: url(../images/home/banner/slider-2.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -246,10 +250,10 @@ nav>ul>li.dropdown:first-child>a:hover::after{
     overflow: hidden;
     transition: all 0.3s linear;
 }
-.right-btn::after{
-    background-image: url(../images/banner/slider-2.png);
+.slider-2 .left-btn .small-bg-left, .slider-2 .right-btn .small-bg-right{
+    background-image: url(../images/home/banner/slider-1.png);
 }
-.left-btn:hover::after, .right-btn:hover::after{
+.slider-1 .left-btn:hover .small-bg-left,.slider-1 .right-btn:hover .small-bg-right, .slider-2 .left-btn:hover .small-bg-left,.slider-2 .right-btn:hover .small-bg-right{
     opacity: 1;
     left: 0;
 }
@@ -260,7 +264,6 @@ nav>ul>li.dropdown:first-child>a:hover::after{
 .slider-text{    
     padding: 200px 50px;
     color: white;
-    font-family: var(--heading-font-family);
 }
 .slider-text h1{
     font-size: 65px;
@@ -273,11 +276,11 @@ nav>ul>li.dropdown:first-child>a:hover::after{
 
 /* Welcome Start */
 .welcome{
-    background-image: url(../images/welcome/welcome-bg.png);
+    background-image: url(../images/home/welcome/welcome-bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 165vh;
+    height: 80vh;
     z-index: 0;
 }
 .welcome::before{
@@ -286,11 +289,10 @@ nav>ul>li.dropdown:first-child>a:hover::after{
     z-index: -1;
     top: 0;
     left: 0;
-    background-image: url(../images/welcome/left-shape.png);
+    background-image: url(../images/home/welcome/left-shape.png);
     background-repeat: no-repeat;
     background-position: left;
     height: 100vh;
-    width: 100%;
 }
 .welcome::after{
     content: '';
@@ -298,7 +300,7 @@ nav>ul>li.dropdown:first-child>a:hover::after{
     z-index: -1;
     top: 0;
     right: 0;
-    background-image: url(../images/welcome/right-shape.png);
+    background-image: url(../images/home/welcome/right-shape.png);
     background-repeat: no-repeat;
     background-position: right;
     height: 100vh;
@@ -323,7 +325,7 @@ nav>ul>li.dropdown:first-child>a:hover::after{
     height: 1px;
     width: 45px;
 }
-.welcome-text h6,  .feature-left h5{
+.welcome-text h6, .feature-left h5, .recipe-desc p{
     color: var(--normal-color-1);
     font-size: 20px;
     font-family: var(--other-font-family);
@@ -336,6 +338,15 @@ nav>ul>li.dropdown:first-child>a:hover::after{
 .welcome-text a{
     background-color: var(--main-color);
     color: var(--white);
+}
+
+/* Features */
+.feature{
+    background-image: url(../images/home/welcome/welcome-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
 }
 .angle-button{
     position: relative;
@@ -362,6 +373,10 @@ nav>ul>li.dropdown:first-child>a:hover::after{
     color: var(--white);
     background-color: var(--main-color);
 }
+.swiper-button-prev:after, 
+.swiper-button-next:after{
+    display: none;
+}
 .feature-left h5{
     color: var(--normal-color-2);
 }
@@ -377,7 +392,6 @@ nav>ul>li.dropdown:first-child>a:hover::after{
     left: 25%;
     top: 0;
     transform: translate(50%,  -50%);
-    font-family: var(--heading-font-family);
     font-weight: 400;
     height: 70px;
     width: 70px;
@@ -388,7 +402,6 @@ nav>ul>li.dropdown:first-child>a:hover::after{
     color: #343434;
 }
 .card .card-body h5{
-    font-family: var(--heading-font-family);
     color: #343434;
     font-size: 18px;
     font-weight: lighter;
@@ -415,4 +428,33 @@ nav>ul>li.dropdown:first-child>a:hover::after{
 .card .card-body a:hover::after{
     left: 120%;
     transition: all 0.3s linear;  
+}
+
+/* Special Recipe */
+.s-recipe{
+    background-image: url(../images/home/recipies/recipe-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    background-attachment: fixed;
+}
+.recipe-img{
+    padding-right: 150px;
+}
+.recipe-desc{
+    border-left: 2px solid var(--white);
+    color: var(--white);
+    padding-left: 50px;
+}
+.recipe-desc h1{
+    font-weight: 800;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.recipe-desc p{
+    color: var(--white);
+    font-weight: 500;
+    max-width: 79%;
+    margin-bottom: 32px;
 }
