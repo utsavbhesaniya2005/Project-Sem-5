@@ -1,0 +1,237 @@
+* {
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #94c9d9;
+  --main-color-rgb: 0, 201, 193;
+  --font-color: #454545;
+  --font-color-rgb: 69, 69, 69;
+  --fs: 18px;
+  --fw: 600;
+  --heading-font-family: 'Playfair Display', serif;
+  --normal-font-family: 'Open Sans', sans-serif;
+  --white: #ffffff;
+  --white-rgb: 255, 255, 255;
+}
+
+/* PRODUCT  */
+
+#product-cards h1{
+  text-align: center;
+  font-weight: bold;
+  margin-top: 50px;
+  color:var(--main-color) ;
+  text-shadow: 1px 1px 1px black;
+  border-bottom: 2px solid rgba(161,109,14,1);
+  border-top: 2px solid #454545;
+}
+
+#product-cards .card{
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 3px black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.overlay{
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 10%;
+  margin-left: 0;
+  width: 70px;
+}
+
+#product-cards .card:hover .overlay{
+  opacity: 1;
+  margin-left: 5%;
+  transition: 0.5s ease;
+}
+
+.overlay i img{
+  background-color:var(--main-color);
+  height: 30px;
+  width: 30px;
+  font-size: 20px;
+  padding: 7px;
+  margin: -20%;
+  margin-bottom: 5%;
+  cursor: pointer;
+}
+.overlay .btn-secondary{
+  background: transparent !important;
+  border: none;
+  box-shadow: none;
+}
+
+.product-price{
+font-size: 14px;
+line-height: 15px;
+color: #000;
+white-space: nowrap;
+}
+
+.current-price{
+font-size: 14px;
+font-weight: 800;
+color: var(--font-color);
+
+}
+
+.original-price{
+text-decoration: line-through;
+color: #6f6c6c;
+font-weight: 400;
+font-size: 12px;
+margin-left: 7px;
+}
+
+
+.discount{
+  color: #c60b0b;
+  font-weight: 400;
+  font-size: 13px;
+  margin-left: 7px;
+}
+/* 
+#product-cards button{
+  color: var(--font-color);
+  background:var(--main-color);
+} */
+
+/* add to cart */
+.cartBtn {
+  width: 145px;
+  height: 40px;
+  border: none;
+  border-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: var(--main-color);
+  font-weight: 500;
+  position: relative;
+  background-color: rgb(29, 29, 29);
+  box-shadow: 0 20px 30px -7px rgba(27, 27, 27, 0.219);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.cart {
+  z-index: 2;
+}
+
+.cartBtn:active {
+  transform: scale(0.96);
+}
+
+.product {
+  position: absolute;
+  width: 12px;
+  border-radius: 3px;
+  content: "";
+  left: 23px;
+  bottom: 23px;
+  opacity: 0;
+  z-index: 1;
+  fill:var(--white);
+}
+
+.cartBtn:hover .product {
+  animation: slide-in-top 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-30px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0) rotate(-90deg);
+    opacity: 1;
+  }
+}
+
+.cartBtn:hover .cart {
+  animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* bookmark */
+.bookmarkBtn {
+  width: 100px;
+  height: 40px;
+  border-radius: 0px;
+  border: 2px solid rgb(12, 12, 12);
+  background-color: rgb(12, 12, 12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+}
+
+.IconContainer {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(to bottom, #7fc2d6,#98acb2  );
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition-duration: 0.3s;
+}
+
+.icon {
+  border-radius: 1px;
+}
+
+.text {
+
+  margin-top: 12px;
+  height: 100%;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1;
+  transition-duration: 0.3s;
+  font-size: 1.04em;
+}
+
+.bookmarkBtn:hover .IconContainer {
+  width: 90px;
+  transition-duration: 0.3s;
+}
+
+.bookmarkBtn:hover .text {
+  transform: translate(10px);
+  width: 0;
+  font-size: 0;
+  transition-duration: 0.3s;
+}
+
+.bookmarkBtn:active {
+  transform: scale(0.95);
+  transition-duration: 0.3s;
+}
