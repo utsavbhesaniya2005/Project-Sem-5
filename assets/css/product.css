@@ -16,6 +16,139 @@
   --white: #ffffff;
   --white-rgb: 255, 255, 255;
 }
+body {
+  background: rgb(89, 88, 88);
+}
+/* Header */
+header{
+  background-color: var(--white);
+  position: relative;
+}
+header::after{
+  position: absolute;
+  content: '';
+  background-image: url(../images/home/logo/header-shape-2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  bottom: -40%;
+  z-index: 9;
+}
+.logo a{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 50%);
+  z-index: 99;
+}
+.logo a::before{
+  content: '';
+  background-image: url(../images/home/logo/header-shape-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 210px;
+  width: 210px;
+  position: absolute;
+  bottom: -40px;
+  left: -20px;
+  z-index: -1;
+}
+.logo a img{
+  margin-top: 20px;
+}
+.navbar{
+  padding: 0;
+}
+.navbar-collapse{
+  margin: 0;
+}
+nav>ul>li{
+  line-height: 85px;
+  position: relative;
+}
+nav>ul>li>a.nav-link{
+  color: var(--font-color);
+  padding: 0;
+  padding-right: 40px;
+  font-weight: 600;
+  transition: all 0.3s linear;
+}
+nav ul li a.nav-link::before{
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 65%;
+  width: 0;
+  height: 3px;
+  background-color: var(--main-color);
+  visibility: hidden;
+  transition: all 0.3s linear;
+}
+nav ul li a.nav-link:hover{
+  color: var(--main-color);
+}
+nav ul li a:hover::before{
+  width: 25px;
+  visibility: visible;
+}
+.nav-link.active{
+  color: var(--main-color);
+}
+.nav-link.active::before{
+  visibility: visible;
+  width: 25px;
+}
+nav>ul>li.dropdown>a::after{
+  position: absolute;
+  content: '\2b';
+  font-family: 'font awesome 6 free';
+  font-size: 14px;
+  margin-left: 3px;
+  transition: all 0.3s linear;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  left: 75%;
+}
+nav>ul>li.dropdown>a:hover::after{
+  transform: translateY(-50%) rotate(90deg);
+  vertical-align: middle;
+  margin-left: 3px;
+}
+nav>ul>li.dropdown:first-child>a:hover::after{
+  transform: translateY(-50%) rotate(0deg);
+}
+.dropdown-menu-1{
+  position: absolute;
+  z-index: 99;
+  background-color: var(--white);
+  left: 0;
+  top: 80%;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 250px;
+  box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s linear;
+}
+.dropdown-menu-1 li{
+  line-height: 0px;
+}
+.dropdown-menu-1 li a{
+  padding: 20px 20px;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+.dropdown-menu-1 li a:hover{
+  background-color: var(--main-color);
+  color: var(--white);
+}
+.dropdown:hover .dropdown-menu-1{
+  opacity: 1;
+  visibility: visible;
+}
+
+
 
 /* PRODUCT  */
 
@@ -139,6 +272,13 @@ margin-left: 7px;
   opacity: 0;
   z-index: 1;
   fill:var(--white);
+}
+.item-name{
+  color: rgb(235, 125, 130);
+  font-size: 16px;
+}
+.item-image{
+  height: 297px;
 }
 
 .cartBtn:hover .product {

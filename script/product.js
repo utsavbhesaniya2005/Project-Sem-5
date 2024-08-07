@@ -12,7 +12,10 @@ items.forEach(items =>{
               <button type="button" class="btn btn-secondary" title="Add to Cart"><i><img
                     src="./assets/images/product_page/add.png" alt="" width="30px"></i></button>
             </div>
-            <img class="item-image mb-3 m-1 rounded-2" src="${items.item_image}" alt="">
+            
+            <img class="item-image  m-1 rounded-2" src="${items.item_image}" alt="">
+            <hr class="m-0 m-1">
+            <hr class="m-0 p-1">
             <h3 class="item-name">${items.item_name}</h3>
             <hr class="m-0 m-1">
             <hr class="m-0 p-1">
