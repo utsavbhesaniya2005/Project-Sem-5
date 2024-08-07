@@ -42,15 +42,15 @@ hr{
 h1, h2, h3, h4, h5, h6{
     font-family: var(--heading-font-family);
 }
-.py-100{
-    padding-top: 100px;
-    padding-bottom: 100px;
+.my-100{
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
-.pt-100{
-    padding-top: 100px;
+.mt-100{
+    margin-top: 100px;
 }
-.pb-100{
-    padding-bottom: 100px;
+.mb-100{
+    margin-bottom: 100px;
 }
 .px-50{
     padding-left: 50px;
@@ -132,11 +132,11 @@ header::after{
 .navbar-collapse{
     margin: 0;
 }
-nav>ul>li{
+nav > ul > li{
     line-height: 85px;
     position: relative;
 }
-nav>ul>li>a.nav-link{
+nav > ul > li > a.nav-link{
     color: var(--font-color);
     padding: 0;
     padding-right: 40px;
@@ -168,7 +168,7 @@ nav ul li a:hover::before{
     visibility: visible;
     width: 25px;
 }
-nav>ul>li.dropdown>a::after{
+nav > ul > li.dropdown > a::after{
     position: absolute;
     content: '\2b';
     font-family: 'font awesome 6 free';
@@ -179,12 +179,12 @@ nav>ul>li.dropdown>a::after{
     transform: translateY(-50%) rotate(0deg);
     left: 75%;
 }
-nav>ul>li.dropdown>a:hover::after{
+nav > ul > li.dropdown > a:hover::after{
     transform: translateY(-50%) rotate(90deg);
     vertical-align: middle;
     margin-left: 3px;
 }
-nav>ul>li.dropdown:first-child>a:hover::after{
+nav > ul > li.dropdown:first-child > a:hover::after{
     transform: translateY(-50%) rotate(0deg);
 }
 .dropdown-menu-1{
@@ -309,6 +309,7 @@ nav>ul>li.dropdown:first-child>a:hover::after{
     background-size: cover;
     background-repeat: no-repeat;
     height: 80vh;
+    padding-top: 100px;
     z-index: 0;
 }
 .welcome::before{
@@ -333,6 +334,9 @@ nav>ul>li.dropdown:first-child>a:hover::after{
     background-position: right;
     height: 100vh;
     width: 100%;
+}
+.welcome-inner{
+    padding-bottom: 100px;
 }
 .main-title{
     color: var(--heading-color);
@@ -590,7 +594,7 @@ nav>ul>li.dropdown:first-child>a:hover::after{
     background-color: var(--white);
     margin: auto;
     margin-top: -60px;
-    padding: 100px 100px 115px 100px;
+    padding: 100px 0 115px 100px;
 }
 .discover-item .discover-item-desc{
     margin: 0 20px 0 0;
@@ -654,3 +658,72 @@ nav>ul>li.dropdown:first-child>a:hover::after{
     font-family: var(--other-font-family);
     width: 80%;
 }
+
+/* Our Chefs */
+.chefs{
+    background-color: #f6f6f6;
+    padding: 100px 0;
+}
+.chefs .feature-left p{
+    color: var(--normal-color-2);
+    font-size: 16px;
+    line-height: 26px;
+    width: 95%;
+}
+.chef-card:hover .chef-img::before{
+    opacity: 1;
+}
+.chef-card .chef-img{
+    position: relative;
+    overflow: hidden;
+}
+.chef-card .chef-img::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(98, 195, 231, 0.8);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.3s linear;
+}
+.chef-card .chef-img img{
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.chef-card .chef-img:hover img{
+    transform: scale(1.05);
+}
+.chef-card .chef-img ul{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+.chef-card:hover .chef-img ul{
+    opacity: 1;
+    bottom: 30px;
+}
+.chef-card .chef-img ul li a{
+    font-size: 24px;
+    color: var(--white);
+}
+.chef-card .chef-text h5{
+    font-size: 18px;
+    color: var(--normal-color-1);
+    font-weight: bold;
+    margin: 18px 0 8px 0;
+}
+.chef-card .chef-text p{
+    font-family: var(--other-font-family);
+    font-size: 16px;
+    color: var(--normal-color-2);
+    font-weight: 400;
+}
+
+/* Latest Blog */
