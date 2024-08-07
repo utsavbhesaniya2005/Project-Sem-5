@@ -13,7 +13,9 @@ items.forEach(items =>{
                     src="./assets/images/product_page/add.png" alt="" width="30px"></i></button>
             </div>
             
-            <img class="item-image  m-1 rounded-2" src="${items.item_image}" alt="">
+            <div class="item-image">
+              <img class=" m-1 rounded-2 img-fluid" src="${items.item_image}" alt="">
+            </div>
             <hr class="m-0 m-1">
             <hr class="m-0 p-1">
             <h3 class="item-name">${items.item_name}</h3>
