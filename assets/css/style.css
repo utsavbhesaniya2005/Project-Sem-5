@@ -87,6 +87,26 @@ h1, h2, h3, h4, h5, h6{
     transition: all 0.3s linear;  
 }
 
+/* Cart Btn */
+.offcanvas-title{
+    text-transform: uppercase;
+    font-family: var(--heading-font-family);
+    font-weight: bold;
+}
+.cart-btn{
+    background-color: black;
+    color: var(--white);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border: none;
+    position: fixed;
+    z-index: 999;
+    bottom: 40px;
+    left: 40px;
+}
+
 /* Header */
 header{
     background-color: var(--white);

@@ -26,6 +26,21 @@
     </head>
 
     <body>
+        <!-- Add To Cart Canvas -->
+        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Shopping Cart</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-title="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              
+            </div>
+        </div>
+
+        <!-- Add To Cart Button -->
+        <button class="cart-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
 
         <!-- Header  -->
         <header>
@@ -46,7 +61,7 @@
                                     <a class="nav-link active" href="#">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Our Products</a>
+                                    <a class="nav-link" href="./product.html">All Products</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Menu</a>
