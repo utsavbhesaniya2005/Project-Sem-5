@@ -1,7 +1,15 @@
-let itemsContainerElement = document.querySelector('.items-container');
+let cartItemS =[];
+itemProductPage();
+
+function AddToCart(itemsId) {
+  cartItems.push(itemsId);
+}
+
+function itemProductPage() {
+  let itemsContainerElement = document.querySelector('.items-container');
 
 let innerHTML = '';
-items.forEach(items =>{
+items.forEach(item =>{
   innerHTML += ` <div class="item-container col-md-3 mt-5 h-100 py-0 p-m-0">
           <div class="card border-dark">
             <div class="overlay">
@@ -11,24 +19,26 @@ items.forEach(items =>{
                     src="./assets/images/product_page/heart.png" alt="" width="30px"></i></button>
               <button type="button" class="btn btn-secondary" title="Add to Cart"><i><img
                     src="./assets/images/product_page/add.png" alt="" width="30px"></i></button>
-            </div>
+            </div> 
             
-            <img class="item-image  m-1 rounded-2" src="${items.item_image}" alt="">
+            <div class="item-image">
+              <img class=" m-1 rounded-2 img-fluid" src="${item.item_image}" alt="">
+            </div>
             <hr class="m-0 m-1">
             <hr class="m-0 p-1">
-            <h3 class="item-name">${items.item_name}</h3>
+            <h3 class="item-name">${item.item_name}</h3>
             <hr class="m-0 m-1">
             <hr class="m-0 p-1">
             <div class="product-price">
-              <span class="current-price">${items.current_price}</span>
-              <span class="original-price">${items.original_price}</span>
-              <span class="discount">(${items.item_discount}% OFF)</span>
+              <span class="current-price">${item.current_price}</span>
+              <span class="original-price">${item.original_price}</span>
+              <span class="discount">(${item.item_discount}% OFF)</span>
             </div>
             <hr class="m-0 mt-1">
             <hr class="mb-0 m-1">
             <div class="row">
               <div class="col-6">
-                <button class="cartBtn mt-3 mb-3 m-3">
+                <button class="cartBtn mt-3 mb-3 m-3 onclick="AddToCart(${item})">
                   <svg class="cart " fill="white" viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z">
@@ -59,3 +69,4 @@ items.forEach(items =>{
         </div>`
 });
 itemsContainerElement.innerHTML = innerHTML;
+}
