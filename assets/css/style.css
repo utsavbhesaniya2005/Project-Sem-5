@@ -110,12 +110,13 @@ h1, h2, h3, h4, h5, h6{
 /* Header */
 header{
     background-color: var(--white);
+    padding: 20px 0;
     position: relative;
 }
 header::after{
     position: absolute;
     content: '';
-    background-image: url(../images/home/logo/header-shape-2.png);
+    background-image: url(../images/home/logo/header-shape.png);
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
@@ -124,50 +125,25 @@ header::after{
     bottom: -40%;
     z-index: 9;
 }
-.logo a{
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translate(-50%, 50%);
-    z-index: 99;
-}
-.logo a::before{
-    content: '';
-    background-image: url(../images/home/logo/header-shape-1.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 210px;
-    width: 210px;
-    position: absolute;
-    bottom: -40px;
-    left: -20px;
-    z-index: -1;
-}
-.logo a img{
-    margin-top: 20px;
-}
 .navbar{
     padding: 0;
 }
 .navbar-collapse{
     margin: 0;
-}
-nav > ul > li{
-    line-height: 85px;
-    position: relative;
+    flex-grow: 0;
 }
 nav > ul > li > a.nav-link{
     color: var(--font-color);
-    padding: 0;
-    padding-right: 40px;
+    margin: 0 25px;
     font-weight: 600;
     transition: all 0.3s linear;
+    position: relative;
 }
 nav ul li a.nav-link::before{
     position: absolute;
     content: '';
     left: 0;
-    top: 65%;
+    top: 100%;
     width: 0;
     height: 3px;
     background-color: var(--main-color);
@@ -193,11 +169,11 @@ nav > ul > li.dropdown > a::after{
     content: '\2b';
     font-family: 'font awesome 6 free';
     font-size: 14px;
-    margin-left: 3px;
     transition: all 0.3s linear;
+    right: -25%;
     top: 50%;
+    vertical-align: middle;
     transform: translateY(-50%) rotate(0deg);
-    left: 75%;
 }
 nav > ul > li.dropdown > a:hover::after{
     transform: translateY(-50%) rotate(90deg);
@@ -207,12 +183,15 @@ nav > ul > li.dropdown > a:hover::after{
 nav > ul > li.dropdown:first-child > a:hover::after{
     transform: translateY(-50%) rotate(0deg);
 }
+.dropdown{
+    position: relative;
+}
 .dropdown-menu-1{
     position: absolute;
     z-index: 99;
     background-color: var(--white);
     left: 0;
-    top: 80%;
+    
     visibility: hidden;
     opacity: 0;
     min-width: 250px;
@@ -243,14 +222,15 @@ nav > ul > li.dropdown:first-child > a:hover::after{
 }
 .carousel-item .slider-1,
 .carousel-item .slider-2{
-    background-image: url(../images/home/banner/slider-1.png);
+    background-image: url(../images/home/banner/slider-1.png), linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4));
+    background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 85vh;
 }
 .carousel-item .slider-2{
-    background-image: url(../images/home/banner/slider-2.png);
+    background-image: url(../images/home/banner/slider-2.png), linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4));
 }
 .carousel-control-prev,
 .carousel-control-next{
@@ -733,17 +713,94 @@ nav > ul > li.dropdown:first-child > a:hover::after{
     font-size: 24px;
     color: var(--white);
 }
+.chef-card .chef-text{
+    font-weight: bold;
+}
 .chef-card .chef-text h5{
     font-size: 18px;
     color: var(--normal-color-1);
     font-weight: bold;
-    margin: 18px 0 8px 0;
+    margin: 18px 0 22px 0;
+    font-family: var(--normal-font-family);
+    transition: all 0.3s linear;
+}
+.chef-card .chef-text h5:hover{
+    color: var(--main-color);
 }
 .chef-card .chef-text p{
-    font-family: var(--other-font-family);
     font-size: 16px;
-    color: var(--normal-color-2);
-    font-weight: 400;
+    color: #555555;
 }
 
 /* Latest Blog */
+.blog .blog-text a h5{
+    font-size: 13px;
+    color: var(--normal-color-1);
+    margin: 25px 0;
+    font-weight: bold;
+    font-family: var(--normal-font-family);
+}
+.blog .blog-text a h4{
+    font-size: 28px;
+    line-height: 1.4;
+    color: var(--normal-color-1);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.blog .blog-text p{
+    font-size: 16px;
+    color: var(--normal-color-2);
+    font-weight: 400;
+    width: 90%;
+}
+
+/* Footer */
+.footer-top{
+    background-color: var(--main-color);
+    padding: 40px;
+}
+.newsletter-left{
+    width: 45%;
+}
+.newsletter-left h4{
+    line-height: 1.4;
+    color: var(--white);
+    font-weight: bold;
+    font-family: var(--normal-font-family);
+    margin: 0;
+}
+.newsletter-right{
+    width: 50%;
+}
+.newsletter-right form input{
+    border: none;
+    border-radius: 6px;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    outline: none;
+}
+.newsletter-right form input::placeholder{
+    color: var(--normal-color-2);
+    opacity: 0.4;
+    font-weight: 600;
+    padding-left: 15px;
+}
+.newsletter-right form{
+    position: relative;
+}
+.newsletter-right form a{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #e6dbdf;
+    color: #6c757d;
+    font-size: 14px;
+    padding: 18px 55px;
+    border-radius: 0 6px 6px 0;
+    font-weight: 600;
+    transition: all 0.2s linear;
+}
+.newsletter-right form a:hover{
+    color: var(--normal-color-1);
+}
