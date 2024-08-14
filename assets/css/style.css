@@ -733,6 +733,35 @@ nav > ul > li.dropdown:first-child > a:hover::after{
 }
 
 /* Latest Blog */
+.blog-img{
+    overflow: hidden;
+    position: relative;
+    
+}
+.blog-img a::before{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.2s linear;
+    pointer-events: none;
+}
+.blog-img a:hover::before{
+   opacity: 1;
+}
+.blog-img img{
+    width: 100%;
+    transition: all 0.2s linear;
+}
+.blog-img img:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
 .blog .blog-text a h5{
     font-size: 13px;
     color: var(--normal-color-1);
@@ -746,6 +775,10 @@ nav > ul > li.dropdown:first-child > a:hover::after{
     color: var(--normal-color-1);
     font-weight: bold;
     margin-bottom: 20px;
+    transition: all 0.2s ease;
+}
+.blog .blog-text a h4:hover{
+    color: var(--main-color);
 }
 .blog .blog-text p{
     font-size: 16px;
@@ -757,7 +790,7 @@ nav > ul > li.dropdown:first-child > a:hover::after{
 /* Footer */
 .footer-top{
     background-color: var(--main-color);
-    padding: 40px;
+    padding: 20px 0;
 }
 .newsletter-left{
     width: 45%;
@@ -803,4 +836,61 @@ nav > ul > li.dropdown:first-child > a:hover::after{
 }
 .newsletter-right form a:hover{
     color: var(--normal-color-1);
+}
+.footer-middle, .footer-bottom{
+    background-color: #303339;
+    padding: 80px 0 60px 0;
+    color: var(--normal-color-2);
+}
+.footer-social p{
+    font-size: 14px;
+    width: 90%;
+    margin: 30px 0;
+}
+.footer-icon ul li a{
+    display: block;
+    color: var(--white);
+    height: 35px;
+    width: 35px;
+    border: 1px solid #7b7b7c;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-size: 16px;
+}
+.footer-content h5, .contact h5, .contact a{
+    color: var(--white);
+    font-family: var(--normal-font-family);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.footer-content ul li a{
+    color: var(--normal-color-2);
+    font-size: 14px;
+}
+.contact a h4{
+    font-family: var(--normal-font-family);
+    font-size: 18px;
+    font-weight: 700;
+    color: #c4c4c4;
+}
+.contact .address p{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.contact .mail a h5{
+    color: #c4c4c4;
+    font-size: 16px;
+    font-weight: 400;
+}
+.footer-bottom{
+    padding: 30px 0;
+    border-top: 1px solid #3b3e43;
+}
+.copyright-left .rights span, .copyright-right .develope span{
+    font-size: 14px;
+}
+.copyright-left .rights span a, .copyright-right .develope span a{
+    font-weight: 700;
+    color: var(--main-color);
 }
