@@ -111,7 +111,7 @@ h1, h2, h3, h4, h5, h6{
     transition: all 0.2s linear;
 }
 .cart-btn:hover, .like-btn:hover{
-    line-height: 40px;
+    transform: translateY(-5px);
 }
 .like-btn{
     bottom: 100px;
@@ -147,6 +147,7 @@ nav > ul > li > a.nav-link{
     color: var(--font-color);
     margin: 0 25px;
     font-weight: 600;
+    display: inline-block;
     transition: all 0.3s linear;
     position: relative;
 }
@@ -822,16 +823,20 @@ nav > ul > li.dropdown:first-child > a:hover::after{
     display: block;
     width: 100%;
     padding: 15px;
+    color: var(--normal-color-2);
+    font-weight: 600;
+    font-size: 16px;
     outline: none;
 }
 .newsletter-right form input::placeholder{
     color: var(--normal-color-2);
     opacity: 0.4;
     font-weight: 600;
-    padding-left: 15px;
 }
 .newsletter-right form{
     position: relative;
+    border-radius: 6px;
+    overflow: hidden;
 }
 .newsletter-right form a{
     position: absolute;
@@ -841,7 +846,6 @@ nav > ul > li.dropdown:first-child > a:hover::after{
     color: #6c757d;
     font-size: 14px;
     padding: 18px 55px;
-    border-radius: 0 6px 6px 0;
     font-weight: 600;
     transition: all 0.2s linear;
 }
