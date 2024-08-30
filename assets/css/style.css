@@ -9,7 +9,7 @@
     --font-color-rgb: 69, 69, 69;
     --fs: 18px;
     --fw: 400;
-    --heading-font-family: 'Playfair Display', serif;
+    --heading-font-family: 'Poppins', serif;
     --normal-font-family: 'Open Sans', sans-serif;
     --other-font-family : 'Lora', serif;
     --heading-color : #3e606b;
@@ -93,18 +93,29 @@ h1, h2, h3, h4, h5, h6{
     font-family: var(--heading-font-family);
     font-weight: bold;
 }
-.cart-btn{
+.cart-btn, .like-btn{
+    display: block;
     background-color: black;
     color: var(--white);
     border-radius: 50%;
     height: 50px;
     width: 50px;
     line-height: 50px;
+    font-size: 20px;
+    text-align: center;
     border: none;
     position: fixed;
     z-index: 999;
     bottom: 40px;
     left: 40px;
+    transition: all 0.2s linear;
+}
+.cart-btn:hover, .like-btn:hover{
+    transform: translateY(-5px);
+}
+.like-btn{
+    bottom: 100px;
+    color: red;
 }
 
 /* Header */
@@ -136,6 +147,7 @@ nav > ul > li > a.nav-link{
     color: var(--font-color);
     margin: 0 25px;
     font-weight: 600;
+    display: inline-block;
     transition: all 0.3s linear;
     position: relative;
 }
@@ -733,6 +745,35 @@ nav > ul > li.dropdown:first-child > a:hover::after{
 }
 
 /* Latest Blog */
+.blog-img{
+    overflow: hidden;
+    position: relative;
+    
+}
+.blog-img a::before{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.2s linear;
+    pointer-events: none;
+}
+.blog-img a:hover::before{
+   opacity: 1;
+}
+.blog-img img{
+    width: 100%;
+    transition: all 0.2s linear;
+}
+.blog-img img:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
 .blog .blog-text a h5{
     font-size: 13px;
     color: var(--normal-color-1);
@@ -746,6 +787,10 @@ nav > ul > li.dropdown:first-child > a:hover::after{
     color: var(--normal-color-1);
     font-weight: bold;
     margin-bottom: 20px;
+    transition: all 0.2s ease;
+}
+.blog .blog-text a h4:hover{
+    color: var(--main-color);
 }
 .blog .blog-text p{
     font-size: 16px;
@@ -757,7 +802,7 @@ nav > ul > li.dropdown:first-child > a:hover::after{
 /* Footer */
 .footer-top{
     background-color: var(--main-color);
-    padding: 40px;
+    padding: 20px 0;
 }
 .newsletter-left{
     width: 45%;
@@ -778,16 +823,20 @@ nav > ul > li.dropdown:first-child > a:hover::after{
     display: block;
     width: 100%;
     padding: 15px;
+    color: var(--normal-color-2);
+    font-weight: 600;
+    font-size: 16px;
     outline: none;
 }
 .newsletter-right form input::placeholder{
     color: var(--normal-color-2);
     opacity: 0.4;
     font-weight: 600;
-    padding-left: 15px;
 }
 .newsletter-right form{
     position: relative;
+    border-radius: 6px;
+    overflow: hidden;
 }
 .newsletter-right form a{
     position: absolute;
@@ -797,10 +846,66 @@ nav > ul > li.dropdown:first-child > a:hover::after{
     color: #6c757d;
     font-size: 14px;
     padding: 18px 55px;
-    border-radius: 0 6px 6px 0;
     font-weight: 600;
     transition: all 0.2s linear;
 }
 .newsletter-right form a:hover{
     color: var(--normal-color-1);
+}
+.footer-middle, .footer-bottom{
+    background-color: #303339;
+    padding: 80px 0 60px 0;
+    color: var(--normal-color-2);
+}
+.footer-social p{
+    font-size: 14px;
+    width: 90%;
+    margin: 30px 0;
+}
+.footer-icon ul li a{
+    display: block;
+    color: var(--white);
+    height: 35px;
+    width: 35px;
+    border: 1px solid #7b7b7c;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-size: 16px;
+}
+.footer-content h5, .contact h5, .contact a{
+    color: var(--white);
+    font-family: var(--normal-font-family);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.footer-content ul li a{
+    color: var(--normal-color-2);
+    font-size: 14px;
+}
+.contact a h4{
+    font-family: var(--normal-font-family);
+    font-size: 18px;
+    font-weight: 700;
+    color: #c4c4c4;
+}
+.contact .address p{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.contact .mail a h5{
+    color: #c4c4c4;
+    font-size: 16px;
+    font-weight: 400;
+}
+.footer-bottom{
+    padding: 30px 0;
+    border-top: 1px solid #3b3e43;
+}
+.copyright-left .rights span, .copyright-right .develope span{
+    font-size: 14px;
+}
+.copyright-left .rights span a, .copyright-right .develope span a{
+    font-weight: 700;
+    color: var(--main-color);
 }
