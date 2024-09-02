@@ -39,20 +39,20 @@
                     </button>
                     <ul class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
                         <li class="nav-item">
-                            <a class="nav-link" href="./index.html">Home</a>
+                            <a class="nav-link" href="./index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="./product.html">All Products</a>
+                            <a class="nav-link active" href="./product.php">All Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./menu.html">Menu</a>
+                            <a class="nav-link" href="./menu.php">Menu</a>
                         </li>
                         <li class="dropdown">
                             <a class="nav-link" href="#">About Us</a>
                             <ul class="dropdown-menu-1">
                                 <hr>
                                 <li>
-                                    <a class="dropdown-item" href="#">About Us</a>
+                                    <a class="dropdown-item" href="./about.php">About Us</a>
                                 </li>
                                 <hr>
                                 <li>
@@ -74,9 +74,8 @@
                             <a class="nav-link" href="#">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Log In</a>
+                            <a class="nav-link" href="./login.php">Log In</a>
                         </li>
-                    
                         
                     </ul>
                 </nav>
@@ -99,7 +98,7 @@
   </section>
 
   <script src="./script/items.js"></script>
-  <script src=".\script\product.js"></script>
+  <script src=".\script\pphproduct.js"></script>
 </body>
 
 </html>
