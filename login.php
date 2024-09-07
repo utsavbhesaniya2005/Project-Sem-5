@@ -17,7 +17,7 @@
             <div class="login">
                 <h1>Login</h1>
                 <form method="POST" action="./login.php">
-                    <input type="email" name="username" placeholder="Enter Email Address" class="form-control my-3">
+                    <input type="email" name="email" placeholder="Enter Email Address" class="form-control my-3">
                     <input type="password" name="password" placeholder="Enter Password" class="form-control mb-5">
                     <input type="submit" name="submit" value="Submit" class="submit"> 
                 </form>
@@ -38,22 +38,22 @@
 
     if(isset($_REQUEST['submit'])){
 
-        $username = $_POST['username'];
+        $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $login = mysqli_query($conn, "select * from registeruser where name = '$username' and pass = '$password'");
+        $login = mysqli_query($conn, "select * from registeruser where email = '$email' and pass = '$password'");
 
         $row = mysqli_fetch_array($login);
 
         $count = mysqli_num_rows($login);
 
-        if($count != 1){
+        if($count == 1){
 
-            echo "<script>alert('Username Or Password Must Be Wrong..!!');</script>";
-        }else{
-
-            $_SESSION['username'] = $row['name'];
+            $_SESSION['email'] = $row['email'];
             header("location:./index.php");
+        }else{
+             
+            echo "<script>alert('Username Or Password Must Be Wrong..!!');</script>";
         }
 
     }
