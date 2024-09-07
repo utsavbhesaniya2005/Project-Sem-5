@@ -1,5 +1,3 @@
-<?php include "./connect.php"; ?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,10 +16,10 @@
 
             <div class="login">
                 <h1>Login</h1>
-                <form method="POST">
-                    <input type="email" name="username" placeholder="Enter Email Address" class="form-control my-3" required>
-                    <input type="password" name="password" placeholder="Enter Password" class="form-control mb-5" required>
-                    <input type="submit" name="login" value="Submit" class="submit"> 
+                <form method="POST" action="./login.php">
+                    <input type="email" name="username" placeholder="Enter Email Address" class="form-control my-3">
+                    <input type="password" name="password" placeholder="Enter Password" class="form-control mb-5">
+                    <input type="submit" name="submit" value="Submit" class="submit"> 
                 </form>
                 <p>Not have an account? <a href="./register.php"> SignUp Here</a></p>
             </div>
@@ -34,9 +32,11 @@
 
 <?php
 
-    if(isset($_REQUEST['login'])){
+    session_start();
 
-        session_start();
+    $conn = mysqli_connect("localhost","root","","bakery");
+
+    if(isset($_REQUEST['submit'])){
 
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -47,18 +47,14 @@
 
         $count = mysqli_num_rows($login);
 
-        if($count == 1){
+        if($count != 1){
+
+            echo "<script>alert('Username Or Password Must Be Wrong..!!');</script>";
+        }else{
 
             $_SESSION['username'] = $row['name'];
             header("location:./index.php");
-        }else{
-
-            echo " <script> alert('Username Or Password Must Be Wrong..!!'); </script> ";
         }
 
     }
-
 ?>
-<script>
-   
-</script>

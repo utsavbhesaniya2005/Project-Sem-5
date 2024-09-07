@@ -17,8 +17,8 @@
 
             <div class="login">
                 <h1>Register</h1>
-                <form method="POST">
-                    <input type="text" name="name" placeholder="Enter Your Full Name" class="form-control mt-4 mb-3" required>
+                <form method="POST" action="./register.php">
+                    <input type="text" name="name" placeholder="Enter Your Full Name" class="form-control mt-4 mb-3"  required>
                     <input type="email" name="email" placeholder="Enter Your Email" class="form-control my-3" required>
                     <input type="password" name="pass" placeholder="Enter Password" class="form-control my-3" required>
                     <input type="password" name="cpass" placeholder="Enter Confirm Password" class="form-control mb-5" required>
@@ -42,24 +42,19 @@
         $cpass = $_POST['cpass'];
 
         $sql = mysqli_query($conn, "insert into registeruser(name, email, pass, cpass) values ('$name', '$email', '$pass', '$cpass')");
-
+        
         if($pass == $cpass){
-
+            
             header("location:login.php");
         }else{
-
+            
             echo "<h1>Password And Confirm Password Does Not Match</h1>";
         }
-
-        $user_check = mysqli_query($conn, "select * from registeruser where name = '$name'");
-
-        $row = mysqli_fetch_array($user_check);
-
-        $check = mysqli_num_rows($user_check);
+        
 
         if($sql){
 
-            header("location: login.php");
+            header("location: ./login.php");
         }
 
     }
