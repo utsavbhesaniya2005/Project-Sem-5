@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+}
+
+h4{
+    text-align: center;
+    padding-top: 15px;
+}
+
+.login-area{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup{
+    width: auto;
+    height: auto;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    background-color: transparent;
+}
+.login{
+    width: auto;
+    height: auto;
+    padding: 25px;
+    color: white;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+}
+.clip{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.login-area form{
+    width: 350px;
+}
+.login h1{
+    text-align: center;
+    font-size: 62px;
+    letter-spacing: 5px;
+    color: #0dd3f7;
+}
+.form-control{
+    width: 100%;
+    padding: 7px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Lora', serif; 
+}
+.form-control:hover{
+    border: 2px solid #0dd3f7;
+}
+.form-control:hover::placeholder{
+    color: #0dd3f7;
+}
+.form-control:focus{
+    background-color: transparent;
+    box-shadow: none;
+    color: #0dd3f7;
+    padding-left: 10px;
+    border: 2px solid #0dd3f7;
+    letter-spacing: 1px;
+}
+.form-control::placeholder{
+    color: white;
+    letter-spacing: 3px;
+    transition: all 0.2s ease-in-out;
+}
+
+.submit{
+    display: block;
+    width: 100%;
+    padding: 7px 0;
+    border: 3px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 8px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.submit:hover{
+    color: #0dd3f7;
+    border: 3px solid #0dd3f7;
+}
+
+.login p{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.login p a{
+    color: #0dd3f7;
+    text-decoration: none;
+    font-size: 22px;
+    transition: all 0.3s;
+}
+.login p a:hover{
+    text-decoration: underline;
+}

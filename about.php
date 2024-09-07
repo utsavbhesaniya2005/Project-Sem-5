@@ -100,7 +100,7 @@
                                     <a class="nav-link" href="#">Contact Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Log In</a>
+                                    <a class="nav-link" href="./login.php">Log In</a>
                                 </li>
                             </ul>
                         </nav>

@@ -1,29 +1,42 @@
 <?php include "./connect.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-</head>
-<body>
-    
-    <form method="post">
-        User name: <input type="text" name="uname"><br><br>
-        Email: <input type="email" name="email"><br><br>
-        Password: <input type="password" name="pass"><br><br>
-        Confirm Password: <input type="password" name="cpass"><br><br>
-        <input type="submit" value="Submit" name="submit">
-    </form>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cake - Bakery</title>
 
-</body>
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="./assets/css/login.css">
+    </head>
+    <body>
+        <div class="login-area">
+
+            <video autoplay loop muted plays-inline class="clip" src="./assets/images/login/login-bg.mp4"></video>
+
+            <div class="login">
+                <h1>Register</h1>
+                <form method="POST">
+                    <input type="text" name="name" placeholder="Enter Your Full Name" class="form-control mt-4 mb-3" required>
+                    <input type="email" name="email" placeholder="Enter Your Email" class="form-control my-3" required>
+                    <input type="password" name="pass" placeholder="Enter Password" class="form-control my-3" required>
+                    <input type="password" name="cpass" placeholder="Enter Confirm Password" class="form-control mb-5" required>
+                    <input type="submit" name="login" value="Submit" class="submit"> 
+                </form>
+            </div>
+        </div>
+    </body>
+
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
 </html>
 
 <?php
 
-    if(isset($_REQUEST['submit'])){
+    if(isset($_REQUEST['login'])){
 
-        $name = $_POST['uname'];
+        $name = $_POST['name'];
         $email = $_POST['email'];
         $pass = $_POST['pass'];
         $cpass = $_POST['cpass'];
@@ -36,6 +49,17 @@
         }else{
 
             echo "<h1>Password And Confirm Password Does Not Match</h1>";
+        }
+
+        $user_check = mysqli_query($conn, "select * from registeruser where name = '$name'");
+
+        $row = mysqli_fetch_array($user_check);
+
+        $check = mysqli_num_rows($user_check);
+
+        if($sql){
+
+            header("location: login.php");
         }
 
     }
