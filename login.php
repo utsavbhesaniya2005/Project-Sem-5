@@ -1,3 +1,31 @@
+<?php
+
+    session_start();
+
+    include "./connect.php";
+
+    if(isset($_REQUEST['submit'])){
+
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $login = mysqli_query($conn, "select * from registeruser where email = '$email' and pass = '$password'");
+
+        $row = mysqli_fetch_array($login);
+
+        $count = mysqli_num_rows($login);
+
+        if($count == 1){
+
+            $_SESSION['email'] = $row['email'];
+            header("location:./index.php");
+        }else{
+             
+            echo "<script>alert('Username Or Password Must Be Wrong..!!');</script>";
+        }
+
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -29,32 +57,3 @@
 
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
 </html>
-
-<?php
-
-    session_start();
-
-    $conn = mysqli_connect("localhost","root","","bakery");
-
-    if(isset($_REQUEST['submit'])){
-
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-
-        $login = mysqli_query($conn, "select * from registeruser where email = '$email' and pass = '$password'");
-
-        $row = mysqli_fetch_array($login);
-
-        $count = mysqli_num_rows($login);
-
-        if($count == 1){
-
-            $_SESSION['email'] = $row['email'];
-            header("location:./index.php");
-        }else{
-             
-            echo "<script>alert('Username Or Password Must Be Wrong..!!');</script>";
-        }
-
-    }
-?>

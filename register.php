@@ -24,6 +24,7 @@
                     <input type="password" name="cpass" placeholder="Enter Confirm Password" class="form-control mb-5" required>
                     <input type="submit" name="login" value="Submit" class="submit"> 
                 </form>
+                <p>Already have an account? <a href="./register.php">Login</a> Here</p>
             </div>
         </div>
     </body>
