@@ -88,11 +88,37 @@
             <div class="container">
                 <hr>
                 <hr>
-                <h1>Add Product</h1>
+                <h1>Update Product</h1>
                 <hr>
                 <hr>
                 <br>
-                <form action="addproduct.php" method="post" enctype="multipart/form-data">
+                <form action="updateproduct.php" method="post" enctype="multipart/form-data">
+
+                    <label>Enter Product Id:</label>
+                    <input type="number" value="<?php
+                                    $id = $_GET['id']; 
+                                    $sql = "select * from addproduct limit 1";
+                                    $run = mysqli_query($conn,$sql);
+                                    if($run)
+                                    {
+                                        if(mysqli_num_rows($run) > 0)
+                                        {
+                                            while($row = mysqli_fetch_array($run))
+                                            {
+                                            echo "$id";
+                                            }
+                                        }
+                                        else
+                                        {
+                                            echo "No Records Found...";
+                                        }
+                                    }
+                                    else
+                                    {
+                                        echo "Error Has Been Occurred...";
+                                    }
+                                ?>" name="proid">
+                    <br>
 
                     <br>
                     <label>Enter Product Name:</label>
@@ -118,7 +144,7 @@
                     <input type="file" name="proimage" id="upload"><br><br>
                     <img src="./assets/images/cake/delightful-and-delicious-fruit-cake.webp" alt="Choose Image" id="img" name="img"><br><br>
 
-                    <input type="submit" value="Add Product" name="addproduct" class="add">
+                    <input type="submit" value="Update Product" name="updateproduct" class="add">
                 </form>
 
                 <br>
@@ -148,8 +174,9 @@
 </html>
 <?php 
 
-    if(isset($_POST['addproduct']))
+    if(isset($_POST['updateproduct']))
     {
+        $proid = $_POST['proid'];
         $proname = $_POST['proname'];
         $procprice = $_POST['procprice'];
         $proprice = $_POST['proprice'];
@@ -161,16 +188,16 @@
         
         if(move_uploaded_file($_FILES['proimage']['tmp_name'],$file))
         {
-            $sql = "insert into addproduct(proname,procprice,proprice,prodiscount,proimage) values('$proname','$procprice','$proprice','$prodiscount','$file')";
+            $sql = "update addproduct set proname='$proname', procprice='$procprice', proprice='$proprice', prodiscount='$prodiscount', proimage='$file' where product_id=$proid";
 
             $run = mysqli_query($conn,$sql) or die("Error Has Been Occurred");
 
             if($run){
 
-                echo "<script>alert('Product Added Successfully..')</script>";
+                echo "<script>alert('Product Updated Successfully..')</script>";
             }else{
 
-                echo "<script>alert('Error: Product Not Added..!')</script>";
+                echo "<script>alert('Error: Product Not Updated..!')</script>";
             }
         }
     }

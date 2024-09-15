@@ -26,21 +26,6 @@
     </head>
 
     <body>
-        <!-- Add To Cart Canvas -->
-        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Shopping Cart</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-title="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              hello
-            </div>
-        </div>
-
-        <!-- Add To Cart Button -->
-        <button class="cart-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
-            <i class="fa-solid fa-cart-shopping"></i>
-        </button>
 
         <!-- Header  -->
         <header>
@@ -91,8 +76,19 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Contact Us</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./login.php">Log In</a>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link">Log In</a>
+                                    <ul class="dropdown-menu-1">
+                                        <hr>
+                                        <li>
+                                            <a class="dropdown-item" href="./login.php">User Login</a>
+                                        </li>
+                                        <hr>
+                                        <li>
+                                            <a class="dropdown-item" href="./admin-login.php">Admin</a>
+                                        </li>
+                                        <hr>
+                                    </ul>
                                 </li>
                             </ul>
                         </nav>

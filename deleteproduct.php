@@ -1,4 +1,24 @@
-<?php include "./connect.php"; ?>
+<?php
+
+    include "./connect.php"; 
+
+    $id = $_GET['id']; 
+    $sql_query = "delete from addproduct where product_id=$id"; 
+    $result = mysqli_query($conn, $sql_query); 
+
+    if($result){
+
+        if($result){
+
+            echo "<script>alert('User Data Deleted Successfully!')</script>
+            ";
+            echo "<script>window.location.href = './showproduct.php';</script>";
+        }else{
+
+            "<script>alert('Error: Could not Delete user data.')</script>";
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -88,37 +108,17 @@
             <div class="container">
                 <hr>
                 <hr>
-                <h1>Add Product</h1>
+                <h1>Remove Product</h1>
                 <hr>
                 <hr>
                 <br>
-                <form action="addproduct.php" method="post" enctype="multipart/form-data">
+                <form action="deleteproduct.php" method="post">
 
-                    <br>
-                    <label>Enter Product Name:</label>
-                    <input type="text" name="proname">
-                    <br>
-
-                    <br>
-                    <label>Enter Current-Price:</label>
-                    <input type="number" name="procprice">
+                    <label>Enter Product Id:</label>
+                    <input type="number" name="proid">
                     <br>
 
-                    <br>
-                    <label>Enter Original-price:</label>
-                    <input type="number" name="proprice">
-                    <br>
-
-                    <br>
-                    <label>Enter Product Discount:</label>
-                    <input type="text" name="prodiscount">
-                    <br><br>
-
-                    <label>Choose Product Image: </label>
-                    <input type="file" name="proimage" id="upload"><br><br>
-                    <img src="./assets/images/cake/delightful-and-delicious-fruit-cake.webp" alt="Choose Image" id="img" name="img"><br><br>
-
-                    <input type="submit" value="Add Product" name="addproduct" class="add">
+                    <input type="submit" value="Delete Product" name="deleteproduct" class="add">
                 </form>
 
                 <br>
@@ -128,51 +128,27 @@
 
     </main>
 
-
-    <script src="./assets/js/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        $("#img").click(function(){
-            $("#upload").click();
-        });
-
-        $("#upload").change(function(){
-            const file = this.files[0];
-            url = URL.createObjectURL(file);
-            $("#img").attr('src',url);
-        });
-    });
-    </script>
 </body>
 
 </html>
 <?php 
 
-    if(isset($_POST['addproduct']))
+    if(isset($_POST['deleteproduct']))
     {
-        $proname = $_POST['proname'];
-        $procprice = $_POST['procprice'];
-        $proprice = $_POST['proprice'];
-        $prodiscount = $_POST['prodiscount'];
-        $image = $_FILES['proimage']['name'];
+        $proid = $_POST['proid'];
 
-        $dir = "./uploads/";
-        $file = $dir.basename($image);
-        
-        if(move_uploaded_file($_FILES['proimage']['tmp_name'],$file))
-        {
-            $sql = "insert into addproduct(proname,procprice,proprice,prodiscount,proimage) values('$proname','$procprice','$proprice','$prodiscount','$file')";
+        $sql = "delete from addproduct where product_id='$proid'";
 
-            $run = mysqli_query($conn,$sql) or die("Error Has Been Occurred");
+        $run = mysqli_query($conn,$sql) or die("Error Has Been Occurred");
 
-            if($run){
+        if($run){
 
-                echo "<script>alert('Product Added Successfully..')</script>";
-            }else{
+            echo "<script>alert('Product Removed Successfully..')</script>";
+        }else{
 
-                echo "<script>alert('Error: Product Not Added..!')</script>";
-            }
+            echo "<script>alert('Error: Product Not Removed..!')</script>";
         }
+        
     }
 
 ?>
