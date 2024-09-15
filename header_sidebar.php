@@ -44,12 +44,6 @@
                             </svg>
                         </a>
                     </div>
-                    <div class="search-bar">
-                        <input type="text" placeholder="Search">
-                        <span>
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </span>
-                    </div>
                 </div>
                 <div class="logo">
                     <a href="javascript:void(0);">
@@ -68,7 +62,7 @@
                     </div>
                     <div class="profile">
                         <a href="javascript:void(0);">
-                            <span>Welcom, <?php
+                            <span>Welcome, <?php
                                         $sql = "select * from adminlogin";
                                         $run = mysqli_query($conn,$sql);
                                         if($run)

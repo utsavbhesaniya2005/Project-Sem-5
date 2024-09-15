@@ -1,4 +1,4 @@
-<?php include "./connect.php"; ?>
+<?php include "./connect.php";?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -116,7 +116,7 @@
 
                     <label>Choose Product Image: </label>
                     <input type="file" name="proimage" id="upload"><br><br>
-                    <img src="./assets/images/cake/delightful-and-delicious-fruit-cake.webp" alt="Choose Image" id="img" name="img"><br><br>
+                    <img src="./assets/images/cake/delightful-and-delicious-fruit-cake.webp" alt="Choose Image" id="img" name="img" style="height: 200px;width:200px;"><br><br>
 
                     <input type="submit" value="Add Product" name="addproduct" class="add">
                 </form>
@@ -168,6 +168,7 @@
             if($run){
 
                 echo "<script>alert('Product Added Successfully..')</script>";
+                echo "<script>window.location.href = './showproduct.php';</script>";
             }else{
 
                 echo "<script>alert('Error: Product Not Added..!')</script>";

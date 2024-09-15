@@ -95,7 +95,7 @@
                 <form action="updateproduct.php" method="post" enctype="multipart/form-data">
 
                     <label>Enter Product Id:</label>
-                    <input type="number" value="<?php
+                    <input type="number" name="proid" value="<?php
                                     $id = $_GET['id']; 
                                     $sql = "select * from addproduct limit 1";
                                     $run = mysqli_query($conn,$sql);
@@ -117,7 +117,7 @@
                                     {
                                         echo "Error Has Been Occurred...";
                                     }
-                                ?>" name="proid">
+                                ?>">
                     <br>
 
                     <br>
@@ -195,6 +195,7 @@
             if($run){
 
                 echo "<script>alert('Product Updated Successfully..')</script>";
+                echo "<script>window.location.href = './showproduct.php';</script>";
             }else{
 
                 echo "<script>alert('Error: Product Not Updated..!')</script>";

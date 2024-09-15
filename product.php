@@ -133,7 +133,7 @@
                           </div> 
                           
                           <div class='item-image'>
-                            <img class=' m-1 rounded-2 img-fluid' src=$row[5] alt=''>
+                            <img class='m-1 rounded-2 img-fluid' src=$row[5] alt=''>
                           </div>
                           <hr class='m-0 m-1'>
                           <hr class='m-0 p-1'>

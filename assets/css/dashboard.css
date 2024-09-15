@@ -120,16 +120,21 @@ header{
 .sub.black{
     fill: var(--second-description-color) !important;
 }
-.search-bar {
+.search-bar{
     display: flex;
-    width: 230px;
-    background-color: var(--bg-color);
-    border-radius: 20px;
+    width: 40%;
+    padding: 5px 0;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    cursor: text;
+    margin-bottom: 50px;
+    position: relative;
 }
-.search-bar input {
+.search-bar input{
     border: none;
-    border-radius: 20px;
-    background-color: transparent;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--main-color);
     line-height: 22px;
     padding: 7px 15px;
     padding-top: 9px;
@@ -137,23 +142,24 @@ header{
     font-family: var(--font);
     outline: none;
 }
-.search-bar span {
+.search-bar input::placeholder{
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+}
+.search-bar span{
     font-size: 17px;
     height: 40px;
     width: 40px;
-    color: var(--border-color);
+    color: var(--white);
     font-weight: 600;
-    position: relative;
     transition: all 0.1s ease-in-out;
 }
 .search-bar span i {
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 10px;
     transform: translate(-50%, -51%);
-}
-.search-bar span:hover,.fullscreen a:hover{
-    color: var(--main-color);
 }
 .profile nav ul li a:hover{
     background-color: var(--bg-color) !important;

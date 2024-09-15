@@ -29,94 +29,47 @@
 
         <!-- Page Body -->
         <div class="page-body">
-            <div class="row">
-                <div class="user-data">
-                    <?php
-                        $sql = "select * from addproduct";
-                        $run = mysqli_query($conn,$sql);
-                        if($run)
-                        {
-                            if(mysqli_num_rows($run) > 0)
-                            {
-                                
-                                echo "<table class='table' style='width:100%'>
-                                        <tr style='background-color: var(--main-color);color: var(--white);
-                                        '>
-                                            <th style='padding: 10px;
-                                            text-align: center;
-                                            font-size: 18px;'>Product Id</th>
-                                            <th>Product Name</th>
-                                            <th>Product Current-Price</th>
-                                            <th>Product Original-Price</th>
-                                            <th>Product Discount</th>
-                                            <th>Product Image</th>
-                                            <th colspan='2'>Actions</th>
-                                        </tr>";
-                                while($row = mysqli_fetch_array($run))
-                                {
-                                echo "<tr>
-                                    <td style='background-color: var(--normal-color);color: var(--white);margin-top: 50px;text-align:center;'>$row[0]</td>
-                                    <td style='background-color: var(--normal-color);color: var(--white);text-align:center;'>$row[1]</td>
-                                    <td style='background-color: var(--normal-color);color: var(--white);text-align:center;'>$row[2]</td>
-                                    <td style='background-color: var(--normal-color);color: var(--white);text-align:center;'>$row[3]</td>
-                                    <td style='background-color: var(--normal-color);color: var(--white);text-align:center;'>$row[4]</td>
-                                    <td style='background-color: var(--normal-color);color: var(--white);text-align:center;
-                                    '><img src='$row[5]' alt='Choose Image' id='img' name='img' style='height: 150px;
-                                    width: 150px;'
-                                    '></td>
-                                    <td style='background-color: var(--normal-color);color: var(--white);text-align:center;
-                                    padding:10px;
-                                    display: flex;justify-content: space-around;height: 158px;
-                                    width: 1;align-items:center;column-gap: 15px;'>
-                                        <a href='./updateproduct.php?id={$row[0]}' style='cursor:pointer;
-                                        width: 100%;
-                                        padding: 7px 15px;
-                                        border: 3px solid #5798b0;
-                                        background-color: transparent;
-                                        color: #5798b0;
-                                        font-size: 28px;
-                                        font-weight: 600;
-                                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                                        border-radius: 8px;
-                                        letter-spacing: 2px;
-                                        cursor: pointer;
-                                        transition: all 0.2s ease-in-out;'><i class='fa-regular fa-pen-to-square'></i></a>
-
-
-
-                                        <a href='./deleteproduct.php?id={$row[0]}' style='cursor:pointer;
-                                        width: 100%;
-                                        padding: 7px 15px;
-                                        text-align: center;
-                                        border: 3px solid red;
-                                        background-color: transparent;
-                                        color: red;
-                                        font-size: 28px;
-                                        font-weight: 600;
-                                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                                        border-radius: 8px;
-                                        cursor: pointer;
-                                        transition: all 0.2s ease-in-out;'><i class='fa-solid fa-trash-can'></i></a>
-                                    </td>
-                                </tr>";
-                                }
-                                echo "</table>";
-                            }
-                            else
-                            {
-                                echo "No Records Found...";
-                            }
-                        }
-                        else
-                        {
-                            echo "Error Has Been Occurred...";
-                        }
-                    ?>
-                </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search User Details By Name" name="search_text" id="search_text">
+                <span>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
             </div>
+            <div id="result"></div>
         </div>
 
     </main>
 
 </body>
 </html>
+<script src="./assets/js/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+        load_data();
+        function load_data(query){
+            $.ajax({
+                url:"product_fetch.php",
+                method:"POST",
+                data:{query:query},
+                success:function(data){
+                    $('#result').html(data);
+                }
+            });
+        }
+
+        $('#search_text').keyup(function()
+        {
+            var search = $(this).val();
+            if(search != '')
+            {
+                load_data(search);
+            }
+            else
+            {
+                load_data();
+            }
+        });
+});
+
+</script>

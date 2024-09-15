@@ -1,4 +1,6 @@
-<?php include "./connect.php"; ?>
+<?php   include "./connect.php";
+        $query = mysqli_query($conn, "select * from registeruser");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -63,85 +65,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="content">
-                                <?php
-                                    $sql = "select * from registeruser";
-                                    $run = mysqli_query($conn,$sql);
-                                    if($run)
-                                    {
-                                        if(mysqli_num_rows($run) > 0)
-                                        {
-                                            
-                                            echo "<table class='table' style='width:100%'>
-                                                    <tr style='background-color: var(--main-color);color: var(--white);
-                                                    '>
-                                                        <th style='padding: 10px;
-                                                        text-align: center;
-                                                        font-size: 18px;'>User Id</th>
-                                                        <th>Username</th>
-                                                        <th>Email</th>
-                                                        <th>Password</th>
-                                                        <th colspan='2'>Actions</th>
-                                                    </tr>";
-                                            while($row = mysqli_fetch_array($run))
-                                            {
-                                            echo "<tr>
-                                                <td style='background-color: var(--normal-color);color: var(--white);margin-top: 50px;text-align:center;'>$row[0]</td>
-                                                <td style='background-color: var(--normal-color);color: var(--white);text-align:center;'>$row[1]</td>
-                                                <td style='background-color: var(--normal-color);color: var(--white);text-align:center;'>$row[2]</td>
-                                                <td style='background-color: var(--normal-color);color: var(--white);text-align:center;'>$row[3]</td>
-                                                <td style='background-color: var(--normal-color);color: var(--white);text-align:center;
-                                                padding:10px;
-                                                display: flex;justify-content: space-around;align-items:center;'>
-                                                    <a href='./userupdate.php?id={$row[0]}' style='cursor:pointer;
-                                                    width: 45%;
-                                                    padding: 7px 0;
-                                                    border: 3px solid white;
-                                                    background-color: transparent;
-                                                    color: white;
-                                                    font-size: 28px;
-                                                    font-weight: 600;
-                                                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                                                    border-radius: 8px;
-                                                    letter-spacing: 2px;
-                                                    cursor: pointer;
-                                                    transition: all 0.2s ease-in-out;'>Update</a>
-
-
-
-                                                    <a href='./deleteuser.php?id={$row[0]}' style='cursor:pointer;
-                                                    width: 45%;
-                                                    padding: 7px 0;
-                                                    border: 3px solid white;
-                                                    background-color: transparent;
-                                                    color: white;
-                                                    font-size: 28px;
-                                                    font-weight: 600;
-                                                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                                                    border-radius: 8px;
-                                                    letter-spacing: 2px;
-                                                    cursor: pointer;
-                                                    transition: all 0.2s ease-in-out;'>Delete</a>
-                                                </td>
-                                            </tr>";
-                                            }
-                                            echo "</table>";
-                                        }
-                                        else
-                                        {
-                                            echo "No Records Found...";
-                                        }
-                                    }
-                                    else
-                                    {
-                                        echo "Error Has Been Occurred...";
-                                    }
-                                ?>
-                            </div>
-                        </div>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search User Details By Name" name="search_text" id="search_text">
+                        <span>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
                     </div>
+                    <div id="result"></div>
                 </div>
             </div>
 
@@ -152,3 +82,34 @@
 </body>
 
 </html>
+<script src="./assets/js/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+        load_data();
+        function load_data(query){
+            $.ajax({
+                url:"user_data_fetch.php",
+                method:"POST",
+                data:{query:query},
+                success:function(data){
+                    $('#result').html(data);
+                }
+            });
+        }
+
+        $('#search_text').keyup(function()
+        {
+            var search = $(this).val();
+            if(search != '')
+            {
+                load_data(search);
+            }
+            else
+            {
+                load_data();
+            }
+        });
+});
+
+</script>
