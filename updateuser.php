@@ -69,10 +69,9 @@
         <!-- page-body -->
         <div class="page-body">
         <h1 style="text-align: center; width: 100%;color:#5798b0;margin-bottom:100px;font-weight:700">Update User Data</h1>
-            <form action="userupdate.php" method="post">
+            <form action="updateuser.php" method="post">
                 <table>
                     <input type="number" value="<?php
-                                    $id = $_GET['id']; 
                                     $sql = "select * from registeruser limit 1";
                                     $run = mysqli_query($conn,$sql);
                                     if($run)
@@ -93,7 +92,7 @@
                                     {
                                         echo "Error Has Been Occurred...";
                                     }
-                                ?>" name="id" class="form-control"><br>
+                                ?>" name="id" placeholder="Enter Your Id" class="form-control"><br>
                         <input type="text" name="uname" placeholder="Enter Your Name"  class="form-control"><br>
                     <input type="email" name="email" placeholder="Enter User Email" class="form-control"><br>
                     <input type="password" name="pass" placeholder="Enter User Password" class="form-control"><br>
@@ -111,7 +110,7 @@
     
     if (isset($_POST['updatedata'])){
 
-        $id = $_GET['id'];
+        $id = $_POST['id']; 
         $uname = $_POST['uname'];
         $email = $_POST['email'];
         $pass = $_POST['pass'];

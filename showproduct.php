@@ -4,6 +4,17 @@
 
 <head>
 
+    <style>
+        h1{
+            margin: 20px 0px;
+            margin-bottom: 50px;
+            text-align: center;
+            font-family: var(--other-font-family);
+            font-size: 40px;
+            color: var(--main-color);
+        }
+    </style>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel - Bakery Management System</title>
@@ -29,6 +40,7 @@
 
         <!-- Page Body -->
         <div class="page-body">
+            <h1>Show All Product</h1>
             <div class="search-bar">
                 <input type="text" placeholder="Search User Details By Name" name="search_text" id="search_text">
                 <span>

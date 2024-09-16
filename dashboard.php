@@ -5,6 +5,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
+    <style>
+        h1{
+            margin: 20px 0px;
+            margin-bottom: 50px;
+            text-align: center;
+            font-family: var(--other-font-family);
+            font-size: 40px;
+            color: var(--main-color);
+        }
+    </style>
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +42,7 @@
 
         <!-- page-body -->
         <div class="page-body">
-            
+            <h1>Dashboard</h1>
             <!-- Dashboard -->
             <div class="dashboard">
                 <div class="container">
