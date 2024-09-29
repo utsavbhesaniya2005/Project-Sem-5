@@ -3,115 +3,114 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="shortcut icon" href="./assets/images/logo/fav-icon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake - Bakery</title>
+    <link rel="shortcut icon" href="./assets/images/home/logo/fav-icon.png" type="image/x-icon">
 
-  <!-- fonts -->
-  <link rel="stylesheet" href="./assets/css/font.css">
+    <!-- fonts -->
+    <link rel="stylesheet" href="./assets/css/font.css">
 
-  <!-- font awesome -->
-  <link rel="stylesheet" href="./assets/css/all.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./assets/css/all.min.css">
 
-  <!-- bootstrap -->
-  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 
-  <!-- Css -->
-  <link rel="stylesheet" href="./assets/css/product.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!-- Slider Css -->
-  <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
-
+    <!-- Product Css -->
+    <link rel="stylesheet" href="./assets/css/product.css">
 
 </head>
 
-<body class="">
-           <!-- Add To Cart Canvas -->
-           <div  class="offcanvas offcanvas-end"  data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Shopping Cart</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-title="Close">
-              </button>
-            </div>
-            <div class="offcanvas-body">
-                <div class="cart-page"> 
-                    <div class="cart-items-container" >
-                     
-                    </div>
-                </div>
-            </div>
+<body>
+    <!-- Add To Cart Canvas -->
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Shopping Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-title="Close"></button>
         </div>
+        <div class="offcanvas-body">
+            
+        </div>
+    </div>
 
-        <!-- Add To Cart Button -->
-        <button class="cart-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span class="cart-item-count">0</span>
-        </button>
+    <!-- Add To Cart Button -->
+    <button class="cart-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </button>
 
-        <header>
-            <div class="container">
-                <div class="row justify-content-between align-items-center">
-                    <div class="col-2">
-                        <div class="logo">
-                            <a href="#">
-                                <img src="./assets/images/home/logo/logo.png" alt="Logo">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-10">
-                        <nav class="navbar navbar-expand-lg justify-content-end">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <ul class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="./index.html">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./product.html">All Products</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Menu</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#">About Us</a>
-                                    <ul class="dropdown-menu-1">
-                                        <hr>
-                                        <li>
-                                            <a class="dropdown-item" href="#">About Us</a>
-                                        </li>
-                                        <hr>
-                                        <li>
-                                            <a class="dropdown-item" href="#">Our Chefs</a>
-                                        </li>
-                                        <hr>
-                                    </ul>
-                                </li>
-                                <li class="nav-item ms-auto">
-                                    <a class="nav-link" href="#">Services</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Shop</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact Us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Log In</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </header>
+    <!-- Like Button -->
+    <a href="./index.html" class="like-btn">
+        <i class="fa-solid fa-heart"></i>
+    </a>
+
+  <header>
+      <div class="container">
+          <div class="row justify-content-between align-items-center">
+              <div class="col-2">
+                  <div class="logo">
+                      <a href="#">
+                          <img src="./assets/images/home/logo/logo.png" alt="Logo">
+                      </a>
+                  </div>
+              </div>
+              <div class="col-10">
+                  <nav class="navbar navbar-expand-lg justify-content-end">
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <ul class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <li class="nav-item">
+                              <a class="nav-link" href="./index.php">Home</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link active" href="./product.php">All Products</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="./menu.php">Menu</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link" href="#">About Us</a>
+                              <ul class="dropdown-menu-1">
+                                  <hr>
+                                  <li>
+                                      <a class="dropdown-item" href="./about.php">About Us</a>
+                                  </li>
+                                  <hr>
+                                  <li>
+                                      <a class="dropdown-item" href="#">Our Chefs</a>
+                                  </li>
+                                  <hr>
+                              </ul>
+                          </li>
+                          <li class="nav-item ms-auto">
+                              <a class="nav-link" href="#">Services</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">Shop</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="./contact.php">Contact Us</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">Log In</a>
+                          </li>
+                      </ul>
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+
   <!-- product -->
-  <section id="product-cards" data-aos="fade-up" data-aos-duration="1500">
+  <section class="mb-100" id="product-cards" data-aos="fade-up" data-aos-duration="1500">
     <div class="container-lg text-center">
-      <hr><hr>
+      <hr>
       <h1>All Product</h1>
-      <di class="row items-container mt-4 mb-4" style="margin-top:30px;">
+      <div class="row items-container mt-4 mb-4" style="margin-top:30px;">
       <?php
         $sql = "select * from addproduct";
         $run = mysqli_query($conn,$sql);
@@ -141,8 +140,8 @@
                           <hr class='m-0 m-1'>
                           <hr class='m-0 p-1'>
                           <div class='product-price'>
-                            <span class='current-price'>Rs $row[2]</span>
-                            <span class='original-price'>Rs $row[3]</span>
+                            <span class='current-price'>Rs $row[3]</span>
+                            <span class='original-price'>Rs $row[2]</span>
                             <span class='discount'>$row[4]% OFF</span>
                           </div>
                           <hr class='m-0 mt-1'>
@@ -189,6 +188,149 @@
                 echo "Error Has Been Occurred...";
             }
           ?>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+      <div class="footer-top">
+          <div class="container">
+              <div class="row align-items-center">
+                  <div class="col-12">
+                      <div class="footer-top">
+                          <div class="newsletter d-flex align-items-center justify-content-between">
+                              <div class="newsletter-left">
+                                  <h4>Join our Newsletter list to get all the latest offers, discounts and other benefits.</h4>
+                              </div>
+                              <div class="newsletter-right">
+                                  <form action="">
+                                      <input type="email" placeholder="Email Address">
+                                      <a href="./index.html">Subscribe</a>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer-middle">
+          <div class="container">
+              <div class="row">
+                  <div class="col-3">
+                      <div class="footer-social">
+                          <div class="footer-logo">
+                              <img src="./assets/images/home/logo/logo.png" alt="Logo">
+                          </div>
+                          <p>Cakecious is a WordPress theme for Bakery and related businesses.</p>
+                          <div class="footer-icon">
+                              <ul class="d-flex align-items-center justify-content-start column-gap-3">
+                                  <li>
+                                      <a href="#">
+                                          <i class="fa-brands fa-facebook-f"></i>
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="#">
+                                          <i class="fa-brands fa-linkedin-in"></i>
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="#">
+                                          <i class="fa-brands fa-twitter"></i>
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="#">
+                                          <i class="fa-brands fa-google-plus-g"></i>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-3">
+                      <div class="footer-content">
+                          <h5>Quick links</h5>
+                          <ul class="d-flex flex-column align-items-start row-gap-2">
+                              <li>
+                                  <a href="#">Your Account</a>
+                              </li>
+                              <li>
+                                  <a href="#">View Order</a>
+                              </li>
+                              <li>
+                                  <a href="#">Privacy Policy</a>
+                              </li>
+                              <li>
+                                  <a href="#">Terms & Conditions</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-3">
+                      <div class="footer-content">
+                          <h5>Work Times</h5>
+                          <ul class="d-flex flex-column align-items-start row-gap-2">
+                              <li>
+                                  <a href="#">Mon. :  Thu.: 8 am - 8 pm</a>
+                              </li>
+                              <li>
+                                  <a href="#">Fri. : 8 am - 8 pm</a>
+                              </li>
+                              <li>
+                                  <a href="#">Sat. : 9am - 4pm</a>
+                              </li>
+                              <li>
+                                  <a href="#">Sun. : Closed</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-3">
+                      <div class="contact">
+                          <h5>Conatct Info</h5>
+                          <a href="tel:18005749687">
+                              <h4>(1800) 574 9687</h4>
+                          </a>
+                          <div class="address">
+                              <p>Cakecious Store<br>
+                              256, baker Street, New York, 5245</p>
+                          </div>
+                          <div class="mail">
+                              <a href="mailto:cakeciousdemo@email.com">
+                                  <h5>cakeciousdemo@email.com</h5>
+                              </a>
+                          </div>
+                      </div>  
+                  </div>
+              </div>              
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12">
+                      <div class="copyright d-flex align-items-center justify-content-between">
+                          <div class="copyright-left">
+                              <div class="rights">
+                                  <span><a href="#">Cakecious</a> © 2024 All Rights Reserved.</span>
+                              </div>
+                          </div>
+                          <div class="copyright-right">
+                              <div class="develope">
+                                  <span>Developed by <a href="#">Utsav</a>
+                                  </span>.
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+
 </body>
 
 </html>

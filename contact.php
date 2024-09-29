@@ -20,35 +20,15 @@
         <!-- bootstrap -->
         <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 
-        <!-- Style Css -->
+        <!-- Css -->
         <link rel="stylesheet" href="./assets/css/style.css">
 
-        <!-- About Css -->
-        <link rel="stylesheet" href="./assets/css/menu.css">
+        <!-- Contact css -->
+        <link rel="stylesheet" href="./assets/css/contact.css">
 
     </head>
 
     <body>
-        <!-- Add To Cart Canvas -->
-        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Shopping Cart</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-title="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              
-            </div>
-        </div>
-
-        <!-- Add To Cart Button -->
-        <button class="cart-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
-            <i class="fa-solid fa-cart-shopping"></i>
-        </button>
-
-        <!-- Like Button -->
-        <a href="./index.html" class="like-btn">
-            <i class="fa-solid fa-heart"></i>
-        </a>
 
         <!-- Header  -->
         <header>
@@ -74,10 +54,10 @@
                                     <a class="nav-link" href="./product.php">All Products</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="./menu.php">Menu</a>
+                                    <a class="nav-link" href="./menu.php">Menu</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link" href="./about.php">About Us</a>
+                                    <a class="nav-link" href="#">About Us</a>
                                     <ul class="dropdown-menu-1">
                                         <hr>
                                         <li>
@@ -97,10 +77,21 @@
                                     <a class="nav-link" href="#">Shop</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./contact.php">Contact Us</a>
+                                    <a class="nav-link active" href="./contact.php">Contact Us</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./login.php">Log In</a>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link">Log In</a>
+                                    <ul class="dropdown-menu-1">
+                                        <hr>
+                                        <li>
+                                            <a class="dropdown-item" href="./login.php">User Login</a>
+                                        </li>
+                                        <hr>
+                                        <li>
+                                            <a class="dropdown-item" href="./admin-login.php">Admin</a>
+                                        </li>
+                                        <hr>
+                                    </ul>
                                 </li>
                             </ul>
                         </nav>
@@ -111,174 +102,100 @@
 
         <!-- Main -->
         <main>
-            
+
             <!-- Menu bg -->
-            <section class="menu position-relative d-flex align-items-center justify-content-center">
+            <section class="contact-bg position-relative d-flex align-items-center justify-content-center">
                 <div class="container">
                     <div class="row text-center">
                         <div class="col-12">
-                            <div class="menu-text position-relative z-2">
-                                <h2>Menu</h2>
+                            <div class="contact-bg-text position-relative z-2">
+                                <h2>Contact Us</h2>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Prize List -->
-            <section class="prize my-100">
+            <!-- Get-Touch List -->
+            <section class="gttouch my-100">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-10">
-                            <div class="feature-left text-center">
-                                <h2 class="main-title">Our Prize List</h2>
-                                <p class="mt-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        <div class="col-12">
+                            <div class="feature-left">
+                                <h2 class="main-title">Get In Touch</h2>
+                                <p class="mt-3">Do you have anything in your mind to let us know? Kindly don't delay to connect to us by means of our contact form.</p>
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <div class="row mt-4 pt-4">
+            <!-- Contact Form -->
+            <div class="contact-form mb-100">
+                <div class="container">
+                    <div class="row">
                         <div class="col-6">
-                            <div class="prize-item">
-                                <div class="prize-item-desc">
-                                    <h4>Double Chocolate Pie</h4>
-                                    <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
-                                        <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$8.99</span>
-                                    </div>
+                            <form class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control py-3 px-3 mb-4" placeholder="Your Name">
                                 </div>
-                                <div class="prize-item-desc mt-3">
-                                    <h4>Zabaglione Cake</h4>
-                                    <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
-                                        <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$12.99</span>
-                                    </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control py-3 px-3" placeholder="Email Address">
                                 </div>
-                                <div class="prize-item-desc mt-3">
-                                    <h4>Blueberry Muffin</h4>
-                                    <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
-                                        <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$8.99</span>
-                                    </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control py-3 px-3 mb-4" placeholder="Subject">
                                 </div>
-                                <div class="prize-item-desc mt-3">
-                                    <h4>Box of Delight</h4>
-                                    <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
-                                        <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$7.99</span>
-                                    </div>
+                                <div class="col-12">
+                                    <textarea class="form-control py-2 px-3 mb-5" placeholder="Write Message" cols="30" rows="7"></textarea>
                                 </div>
-                                <div class="prize-item-desc mt-3">
-                                    <h4>Classic French Croissant</h4>
-                                    <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
-                                        <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$6.99</span>
-                                    </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn py-3 px-3">Submit now</button>
                                 </div>
-                                <div class="prize-item-desc mt-3">
-                                    <h4>Macarons & Tea</h4>
-                                    <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
-                                        <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$8.99</span>
-                                    </div>
-                                </div>
-                                <div class="prize-item-desc mt-3">
-                                    <h4>Strawberry Sweet Cake</h4>
-                                    <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
-                                        <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$11.99</span>
-                                    </div>
-                                </div>
-                                <div class="prize-item-desc mt-3">
-                                    <h4>Cupcake of Vanela</h4>
-                                    <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
-                                        <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$8.99</span>
-                                    </div>
-                                </div>
-                            </div>
+                            </form>
                         </div>
+
                         <div class="col-6">
-                            <div class="prize-item">
-                                <div class="prize-item-desc">
-                                    <h4>Fried Egg Sandwich</h4>
-                                    <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
-                                        <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$8.99</span>
+                            <div class="contact-info">
+                                <div class="address-1">
+                                    <h5>Address:</h5>
+                                    <p>54B, Tailstoi Town 5238
+                                    La city, IA 522364</p>
+                                </div>
+
+                                <div class="phone-email">
+                                    <div class="phone">
+                                        <a href="tel:01372.466.790">Phone :
+                                            <span> 01372.466.790</span>
+                                        </a>
+                                    </div>
+                                    <div class="email">
+                                        <a href="mailto:info@cakebakery.com">Email :
+                                            <span> info@cakebakery.com</span>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="prize-item-desc mt-3">
-                                    <h4>Multigrain Hot Cake</h4>
-                                    <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
-                                        <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$11.99</span>
-                                    </div>
-                                </div>
-                                <div class="prize-item-desc mt-3">
-                                    <h4>Branch Special Cake</h4>
-                                    <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
-                                        <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$8.99</span>
-                                    </div>
-                                </div>
-                                <div class="prize-item-desc mt-3">
-                                    <h4>Bialy Egg Sandwich with Cake</h4>
-                                    <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
-                                        <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$6.99</span>
-                                    </div>
-                                </div>
-                                <div class="prize-item-desc mt-3">
-                                    <h4>Strawberry Sweet Cake</h4>
-                                    <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
-                                        <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$8.99</span>
-                                    </div>
-                                </div>
-                                <div class="prize-item-desc mt-3">
-                                    <h4>Double Chocolate Pie</h4>
-                                    <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
-                                        <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$9.99</span>
-                                    </div>
-                                </div>
-                                <div class="prize-item-desc mt-3">
-                                    <h4>Blueberry Muffin</h4>
-                                    <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
-                                        <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$8.99</span>
-                                    </div>
-                                </div>
-                                <div class="prize-item-desc mt-3">
-                                    <h4>Classic Chocolate Cake</h4>
-                                    <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
-                                        <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$20.99</span>
-                                    </div>
+
+                                <div class="open-time">
+                                    <h5>Opening Hours :</h5>
+                                    <p> 8:00 AM – 10:00 PM <br>
+                                        Monday – Sunday</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div class="row mt-100">
-                        <div class="col-4">
-                            <div class="product-image">
-                                <img src="./assets/images/aboutus/b-approach/b-approach.png" alt="Bakery Image">
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="product-image">
-                                <img src="./assets/images/aboutus/b-approach/b-approach1.png" alt="Bakery Image">
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="product-image">
-                                <img src="./assets/images/aboutus/b-approach/b-approach2.png" alt="Bakery Image">
+            <!-- Map -->
+            <section class="map mb-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="location">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6304.829986131271!2d-122.4746968033092!3d37.80374752160443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808586e6302615a1%3A0x86bd130251757c00!2sStorey+Ave%2C+San+Francisco%2C+CA+94129!5e0!3m2!1sen!2sus!4v1435826432051" width="100%" height="500" frameborder="0" style="border: 0px; pointer-events: none;" allowfullscreen=""></iframe>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </section>
 
@@ -439,7 +356,56 @@
         </script>
 
         <!-- Slider Js -->
-        <script src="./assets/js/swiper-bundle.min.js"></script> 
+        <script src="./assets/js/swiper-bundle.min.js"></script>
+        <script>
+            // Features Slider
+            const swiper = new Swiper('.swiper', {
+                   // Optional parameters
+                   direction: 'horizontal',
+                   loop: true,
+                   slidesPerView: 4,
+                   spaceBetween: 30,
+                   autoplay: true,
+
+                   // Navigation arrows
+                   navigation: {
+                       nextEl: '.swiper-button-next',
+                       prevEl: '.swiper-button-prev',
+                   },
+               });
+        </script>
+        <script>
+            // Testimonial Slider
+            const swiper1 = new Swiper('.swiper-1', {
+               // Optional parameters
+               direction: 'horizontal',
+               loop: true,
+               slidesPerView: 1,
+               spaceBetween: 30,
+               speed: 2000,
+               autoplay: true,
+
+               // Navigation arrows
+               navigation: {
+                   nextEl: '.testimonial-btn-right',
+                   prevEl: '.testimonial-btn-left',
+               },
+           });
+        </script>  
+        <script>
+            // Special Recipe Slider
+            var recipe = new Swiper(".mySwiper", {
+                direction: "horizontal",
+                autoplay: true,
+                loop: true,
+                speed: 2000,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+       </script>  
+
 
     </body>
 </html>

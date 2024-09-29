@@ -24,38 +24,35 @@ ul,ol{
 }
 
 /* Cart Btn */
-
 .offcanvas-title{
   text-transform: uppercase;
   font-family: var(--heading-font-family);
   font-weight: bold;
 }
-.cart-btn{
+.cart-btn, .like-btn{
+  display: block;
   background-color: black;
   color: var(--white);
   border-radius: 50%;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   line-height: 50px;
+  font-size: 20px;
+  text-align: center;
   border: none;
   position: fixed;
   z-index: 999;
   bottom: 40px;
   left: 40px;
+  transition: all 0.2s linear;
 }
-.cart-item-count{
-  background-color: #000;
-  white-space: nowrap;
-  text-align: center;
-  line-height: 18px;
-  position: relative;
-  border-radius: 50%;
-  font-size: 19px;
-  color: #7fc2d6;
-  cursor: pointer;
+.cart-btn:hover, .like-btn:hover{
+  transform: translateY(-5px);
 }
-
-
+.like-btn{
+  bottom: 100px;
+  color: red;
+}
 
 /* Header */
 header{

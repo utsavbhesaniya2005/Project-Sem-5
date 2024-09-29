@@ -533,12 +533,12 @@
                             <div class="copyright d-flex align-items-center justify-content-between">
                                 <div class="copyright-left">
                                     <div class="rights">
-                                        <span>Cakecious <a href="#">Main demo</a> © 2024 All Rights Reserved.</span>
+                                        <span><a href="#">Cakecious</a> © 2024 All Rights Reserved.</span>
                                     </div>
                                 </div>
                                 <div class="copyright-right">
                                     <div class="develope">
-                                        <span>Developed by <a href="#">Bolvo.com</a>
+                                        <span>Developed by <a href="#">Utsav</a>
                                         </span>.
                                     </div>
                                 </div>
