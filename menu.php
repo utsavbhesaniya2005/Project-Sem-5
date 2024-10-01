@@ -30,7 +30,7 @@
 
     <body>
         <!-- Add To Cart Canvas -->
-        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <!-- <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Shopping Cart</h5>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-title="Close"></button>
@@ -38,17 +38,17 @@
             <div class="offcanvas-body">
               
             </div>
-        </div>
+        </div> -->
 
         <!-- Add To Cart Button -->
-        <button class="cart-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+        <!-- <button class="cart-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
             <i class="fa-solid fa-cart-shopping"></i>
-        </button>
+        </button> -->
 
         <!-- Like Button -->
-        <a href="./index.html" class="like-btn">
+        <!-- <a href="./index.html" class="like-btn">
             <i class="fa-solid fa-heart"></i>
-        </a>
+        </a> -->
 
         <!-- Header  -->
         <header>
@@ -85,16 +85,16 @@
                                         </li>
                                         <hr>
                                         <li>
-                                            <a class="dropdown-item" href="#">Our Chefs</a>
+                                            <a class="dropdown-item" href="./ourchefs.php">Our Chefs</a>
                                         </li>
                                         <hr>
                                     </ul>
                                 </li>
                                 <li class="nav-item ms-auto">
-                                    <a class="nav-link" href="#">Services</a>
+                                    <a class="nav-link" href="./service.php">Services</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Shop</a>
+                                    <a class="nav-link" href="./offer.php">What We Offer</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="./contact.php">Contact Us</a>
@@ -144,56 +144,56 @@
                                     <h4>Double Chocolate Pie</h4>
                                     <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
                                         <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$8.99</span>
+                                        <span>₹188.99</span>
                                     </div>
                                 </div>
                                 <div class="prize-item-desc mt-3">
                                     <h4>Zabaglione Cake</h4>
                                     <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
                                         <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$12.99</span>
+                                        <span>₹512.99</span>
                                     </div>
                                 </div>
                                 <div class="prize-item-desc mt-3">
                                     <h4>Blueberry Muffin</h4>
                                     <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
                                         <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$8.99</span>
+                                        <span>₹195.99</span>
                                     </div>
                                 </div>
                                 <div class="prize-item-desc mt-3">
                                     <h4>Box of Delight</h4>
                                     <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
                                         <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$7.99</span>
+                                        <span>₹245.99</span>
                                     </div>
                                 </div>
                                 <div class="prize-item-desc mt-3">
                                     <h4>Classic French Croissant</h4>
                                     <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
                                         <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$6.99</span>
+                                        <span>₹496.99</span>
                                     </div>
                                 </div>
                                 <div class="prize-item-desc mt-3">
                                     <h4>Macarons & Tea</h4>
                                     <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
                                         <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$8.99</span>
+                                        <span>₹475.99</span>
                                     </div>
                                 </div>
                                 <div class="prize-item-desc mt-3">
                                     <h4>Strawberry Sweet Cake</h4>
                                     <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
                                         <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$11.99</span>
+                                        <span>₹785.99</span>
                                     </div>
                                 </div>
                                 <div class="prize-item-desc mt-3">
                                     <h4>Cupcake of Vanela</h4>
                                     <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
                                         <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$8.99</span>
+                                        <span>₹425.99</span>
                                     </div>
                                 </div>
                             </div>
@@ -204,56 +204,56 @@
                                     <h4>Fried Egg Sandwich</h4>
                                     <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
                                         <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$8.99</span>
+                                        <span>₹350.99</span>
                                     </div>
                                 </div>
                                 <div class="prize-item-desc mt-3">
                                     <h4>Multigrain Hot Cake</h4>
                                     <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
                                         <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$11.99</span>
+                                        <span>₹799.99</span>
                                     </div>
                                 </div>
                                 <div class="prize-item-desc mt-3">
                                     <h4>Branch Special Cake</h4>
                                     <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
                                         <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$8.99</span>
+                                        <span>₹899.99</span>
                                     </div>
                                 </div>
                                 <div class="prize-item-desc mt-3">
                                     <h4>Bialy Egg Sandwich with Cake</h4>
                                     <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
                                         <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$6.99</span>
+                                        <span>₹299.99</span>
                                     </div>
                                 </div>
                                 <div class="prize-item-desc mt-3">
                                     <h4>Strawberry Sweet Cake</h4>
                                     <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
                                         <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$8.99</span>
+                                        <span>₹399.99</span>
                                     </div>
                                 </div>
                                 <div class="prize-item-desc mt-3">
                                     <h4>Double Chocolate Pie</h4>
                                     <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
                                         <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$9.99</span>
+                                        <span>₹485.99</span>
                                     </div>
                                 </div>
                                 <div class="prize-item-desc mt-3">
                                     <h4>Blueberry Muffin</h4>
                                     <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
                                         <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$8.99</span>
+                                        <span>₹289.99</span>
                                     </div>
                                 </div>
                                 <div class="prize-item-desc mt-3">
                                     <h4>Classic Chocolate Cake</h4>
                                     <div class="prize-item-price d-flex align-items-center justify-content-between pb-3">
                                         <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                        <span>$20.99</span>
+                                        <span>₹999.99</span>
                                     </div>
                                 </div>
                             </div>

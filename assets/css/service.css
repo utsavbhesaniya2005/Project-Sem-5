@@ -21,10 +21,13 @@
     --white: #ffffff;
     --white-rgb: 255, 255, 255;
 }
+.mb-75{
+    margin-bottom: 75px;
+}
 
 
-/* contact-bg bg */
-.contact-bg{
+/* Service-bg bg */
+.service-bg{
     background-image: url(../images/aboutus/banner/about-bg.png);
     height: 20vh;
     background-repeat: no-repeat;
@@ -32,7 +35,7 @@
     background-position: center;
     position: relative;
 }
-.contact-bg::before{
+.service-bg::before{
     content: '';
     position: absolute;
     top: 0;
@@ -42,7 +45,7 @@
     background-color: rgba(var(--main-color-rgb), 0.7);
     z-index: 1;
 }
-.contact-bg-text h2{
+.service-bg-text h2{
     color: var(--heading-color);
     font-size: 32px;
     font-weight: 600;
@@ -51,54 +54,45 @@
 /* Get-Touch */
 .gttouch .feature-left p{
     color: var(--normal-color-1);
-    font-size: 24px;
+    font-size: 22px;
     font-style: italic;
     font-family: var(--other-font-family);
     font-weight: bolder;
 }
 
-/* Contact Form */
-.form-control{
-    outline: none;
-}
-.form-control:focus{
-    border: 1px solid var(--normal-color-1);
-    box-shadow: none;
-}
-.btn{
-    background-color: var(--main-color);
+/* Offer */
+.offer .offer-list .offer-text a{
     display: block;
-    width: 100%;
-    color: var(--white);
-    font-family: var(--normal-font-family);
-    font-weight: 600;
-    font-size: 18px;
-}
-.contact-info{
-    margin-left: 150px;
-}
-.address-1{
-    width: 40%;
-    margin-bottom: 40px;
-}
-.phone-email{
-    margin-bottom: 40px;
-}
-.contact-info .address-1 h5, .contact-info .address-1 p, .phone-email .phone a, .contact-info .phone-email .email a, .contact-info .open-time h5, .contact-info .open-time p{
-    color: var(--heading-color);
-    font-weight: bold;
+    margin-top: 20px;
     font-family: var(--heading-font-family);
-    margin-bottom: 15px;
+    font-weight: bold;
+    color: var(--heading-color);
     font-size: 20px;
+    transition: all 0.2s linear;
 }
-.contact-info .phone-email .phone{
-    margin-bottom: 23px;
+.offer .offer-list .offer-text a:hover{
+    color: var(--main-color);
 }
-.contact-info .address-1 p, .contact-info .phone-email a span, .contact-info .open-time p{
-    font-size: 16px;
-    color: var(--normal-color-1);
-    font-weight: 400;
+
+
+/* Real Taste */
+.r-taste{
+    background-image: url(../images/aboutus/real-taste/r-taste-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
 }
-.contact-info .open-time p{
-    font-size: 18px;
+.r-taste-text{
+    color: var(--white);
+}
+.r-taste-text h1{
+    font-size: 70px;
+    font-weight: bold;
+}
+.r-taste-text p{
+    font-family: var(--other-font-family);
+    font-style: italic;
+    font-size: 25px;
+    line-height: 40px;
 }

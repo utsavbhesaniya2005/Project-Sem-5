@@ -62,16 +62,16 @@
                                         </li>
                                         <hr>
                                         <li>
-                                            <a class="dropdown-item" href="#">Our Chefs</a>
+                                            <a class="dropdown-item" href="./ourchefs.php">Our Chefs</a>
                                         </li>
                                         <hr>
                                     </ul>
                                 </li>
                                 <li class="nav-item ms-auto">
-                                    <a class="nav-link" href="#">Services</a>
+                                    <a class="nav-link" href="./service.php">Services</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Shop</a>
+                                    <a class="nav-link" href="./offer.php">What We Make</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="./contact.php">Contact Us</a>
@@ -227,7 +227,7 @@
                                                 <img src="./assets/images/home/features-cake/feature-cake-1.png" class="card-img-top" alt="feature-cake-1">
                                             </div>
                                             <div class="card-body text-center">
-                                                <h4><i>$29</i></h4>
+                                                <h4><i>₹899</i></h4>
                                                 <h5 class="card-title">Pista Cupcakes</h5>
                                                 <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
                                             </div>
@@ -239,7 +239,7 @@
                                                 <img src="./assets/images/home/features-cake/feature-cake-2.png" class="card-img-top" alt="feature-cake-2">
                                             </div>
                                             <div class="card-body text-center">
-                                                <h4><i>$29</i></h4>
+                                                <h4><i>₹1299</i></h4>
                                                 <h5 class="card-title">Chocolate Cakes</h5>
                                                 <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
                                             </div>
@@ -251,7 +251,7 @@
                                                 <img src="./assets/images/home/features-cake/feature-cake-3.png" class="card-img-top" alt="feature-cake-3">
                                             </div>
                                             <div class="card-body text-center">
-                                                <h4><i>$29</i></h4>
+                                                <h4><i>₹1399</i></h4>
                                                 <h5 class="card-title">Chocolate Cupcakes</h5>
                                                 <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
                                             </div>
@@ -263,7 +263,7 @@
                                                 <img src="./assets/images/home/features-cake/feature-cake-4.png" class="card-img-top" alt="feature-cake-4">
                                             </div>
                                             <div class="card-body text-center">
-                                                <h4><i>$29</i></h4>
+                                                <h4><i>₹999</i></h4>
                                                 <h5 class="card-title">Strawberry Cupcakes</h5>
                                                 <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
                                             </div>
@@ -275,7 +275,7 @@
                                                 <img src="./assets/images/home/features-cake/feature-cake-1.png" class="card-img-top" alt="feature-cake-1">
                                             </div>
                                             <div class="card-body text-center">
-                                                <h4><i>$29</i></h4>
+                                                <h4><i>₹1499</i></h4>
                                                 <h5 class="card-title">Pista Cupcakes</h5>
                                                 <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
                                             </div>
@@ -287,7 +287,7 @@
                                                 <img src="./assets/images/home/features-cake/feature-cake-2.png" class="card-img-top" alt="feature-cake-2">
                                             </div>
                                             <div class="card-body text-center">
-                                                <h4><i>$29</i></h4>
+                                                <h4><i>₹1349</i></h4>
                                                 <h5 class="card-title">Chocolate Cakes</h5>
                                                 <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
                                             </div>
@@ -299,7 +299,7 @@
                                                 <img src="./assets/images/home/features-cake/feature-cake-3.png" class="card-img-top" alt="feature-cake-3">
                                             </div>
                                             <div class="card-body text-center">
-                                                <h4><i>$29</i></h4>
+                                                <h4><i>₹1299</i></h4>
                                                 <h5 class="card-title">Chocolate Cupcakes</h5>
                                                 <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
                                             </div>
@@ -311,7 +311,7 @@
                                                 <img src="./assets/images/home/features-cake/feature-cake-4.png" class="card-img-top" alt="feature-cake-4">
                                             </div>
                                             <div class="card-body text-center">
-                                                <h4><i>$29</i></h4>
+                                                <h4><i>₹1449</i></h4>
                                                 <h5 class="card-title">Strawberry Cupcakes</h5>
                                                 <a href="#" class="btn text-white" style="background-color: #94c9d9;">Add to cart</a>
                                             </div>
@@ -459,28 +459,28 @@
                                         <h4>Double Chocolate Pic</h4>
                                         <div class="discover-item-price d-flex align-items-center justify-content-between pb-3">
                                             <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                            <span>$8.99</span>
+                                            <span>₹188.99</span>
                                         </div>
                                     </div>
                                     <div class="discover-item-desc mt-3">
                                         <h4>Double Chocolate Pic</h4>
                                         <div class="discover-item-price d-flex align-items-center justify-content-between pb-3">
                                             <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                            <span>$8.99</span>
+                                            <span>₹512.99</span>
                                         </div>
                                     </div>
                                     <div class="discover-item-desc mt-3">
                                         <h4>Double Chocolate Pic</h4>
                                         <div class="discover-item-price d-flex align-items-center justify-content-between pb-3">
                                             <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                            <span>$8.99</span>
+                                            <span>₹195.99</span>
                                         </div>
                                     </div>
                                     <div class="discover-item-desc mt-3">
                                         <h4>Double Chocolate Pic</h4>
                                         <div class="discover-item-price d-flex align-items-center justify-content-between pb-3">
                                             <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                            <span>$8.99</span>
+                                            <span>₹245.99</span>
                                         </div>
                                     </div>
                                 </div>
@@ -491,28 +491,28 @@
                                         <h4>Double Chocolate Pic</h4>
                                         <div class="discover-item-price d-flex align-items-center justify-content-between pb-3">
                                             <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                            <span>$8.99</span>
+                                            <span>₹496.99</span>
                                         </div>
                                     </div>
                                     <div class="discover-item-desc mt-3">
                                         <h4>Double Chocolate Pic</h4>
                                         <div class="discover-item-price d-flex align-items-center justify-content-between pb-3">
                                             <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                            <span>$8.99</span>
+                                            <span>₹475.99</span>
                                         </div>
                                     </div>
                                     <div class="discover-item-desc mt-3">
                                         <h4>Double Chocolate Pic</h4>
                                         <div class="discover-item-price d-flex align-items-center justify-content-between pb-3">
                                             <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                            <span>$8.99</span>
+                                            <span>₹785.99</span>
                                         </div>
                                     </div>
                                     <div class="discover-item-desc mt-3">
                                         <h4>Double Chocolate Pic</h4>
                                         <div class="discover-item-price d-flex align-items-center justify-content-between pb-3">
                                             <p>Chocolate puding, vanilla, fruite rasberry jam milk </p>
-                                            <span>$8.99</span>
+                                            <span>₹425.99</span>
                                         </div>
                                     </div>
                                 </div>

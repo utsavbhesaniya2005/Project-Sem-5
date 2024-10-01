@@ -30,7 +30,7 @@
 
     <body>
         <!-- Add To Cart Canvas -->
-        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <!-- <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Shopping Cart</h5>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-title="Close"></button>
@@ -38,17 +38,17 @@
             <div class="offcanvas-body">
               
             </div>
-        </div>
+        </div> -->
 
         <!-- Add To Cart Button -->
-        <button class="cart-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+        <!-- <button class="cart-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
             <i class="fa-solid fa-cart-shopping"></i>
-        </button>
+        </button> -->
 
         <!-- Like Button -->
-        <a href="./index.html" class="like-btn">
+        <!-- <a href="./index.html" class="like-btn">
             <i class="fa-solid fa-heart"></i>
-        </a>
+        </a> -->
 
         <!-- Header  -->
         <header>
@@ -85,19 +85,19 @@
                                         </li>
                                         <hr>
                                         <li>
-                                            <a class="dropdown-item" href="#">Our Chefs</a>
+                                            <a class="dropdown-item" href="./ourchefs.php">Our Chefs</a>
                                         </li>
                                         <hr>
                                     </ul>
                                 </li>
                                 <li class="nav-item ms-auto">
-                                    <a class="nav-link" href="#">Services</a>
+                                    <a class="nav-link" href="./service.php">Services</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Shop</a>
+                                    <a class="nav-link" href="./offer.php">What We Offer</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact Us</a>
+                                    <a class="nav-link" href="./contact.php">Contact Us</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="./login.php">Log In</a>

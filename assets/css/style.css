@@ -92,6 +92,7 @@ header{
     background-color: var(--white);
     padding: 20px 0;
     position: relative;
+    z-index: 99;
 }
 header::after{
     position: absolute;

@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="./assets/css/style.css">
 
         <!-- Contact css -->
-        <link rel="stylesheet" href="./assets/css/contact.css">
+        <link rel="stylesheet" href="./assets/css/service.css">
 
     </head>
 
@@ -57,7 +57,7 @@
                                     <a class="nav-link" href="./menu.php">Menu</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#">About Us</a>
+                                    <a class="nav-link active" href="#">About Us</a>
                                     <ul class="dropdown-menu-1">
                                         <hr>
                                         <li>
@@ -77,7 +77,7 @@
                                     <a class="nav-link" href="./offer.php">What We Make</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="./contact.php">Contact Us</a>
+                                    <a class="nav-link" href="./contact.php">Contact Us</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link">Log In</a>
@@ -104,95 +104,227 @@
         <main>
 
             <!-- Contact bg -->
-            <section class="contact-bg position-relative d-flex align-items-center justify-content-center">
+            <section class="service-bg position-relative d-flex align-items-center justify-content-center">
                 <div class="container">
                     <div class="row text-center">
                         <div class="col-12">
-                            <div class="contact-bg-text position-relative z-2">
-                                <h2>Contact Us</h2>
+                            <div class="service-bg-text position-relative z-2">
+                                <h2>Our Chefs</h2>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Get-Touch List -->
-            <section class="gttouch my-100">
+            <!-- Our Chefs -->
+            <section class="chefs py-100">
                 <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-12">
+                    <div class="row justify-content-between">
+                        <div class="col-3">
                             <div class="feature-left">
-                                <h2 class="main-title">Get In Touch</h2>
-                                <p class="mt-3">Do you have anything in your mind to let us know? Kindly don't delay to connect to us by means of our contact form.</p>
+                                <h2 class="main-title">Our Chefs</h2>
+                                <p>Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit ametion.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Contact Form -->
-            <div class="contact-form mb-100">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6">
-                            <form class="row g-3">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control py-3 px-3 mb-4" placeholder="Your Name">
+                        <div class="col-3">
+                            <div class="chef-card text-center mb-5">
+                                <div class="chef-img">
+                                    <img src="./assets/images/home/chefs/chef-1.png" class="img-fluid" alt="Chef Image">
+                                    <ul class="d-flex align-items-center justify-content-start column-gap-4">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-skype"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control py-3 px-3" placeholder="Email Address">
-                                </div>
-                                <div class="col-12">
-                                    <input type="text" class="form-control py-3 px-3 mb-4" placeholder="Subject">
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control py-2 px-3 mb-5" placeholder="Write Message" cols="30" rows="7"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn py-3 px-3">Submit now</button>
-                                </div>
-                            </form>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="contact-info">
-                                <div class="address-1">
-                                    <h5>Address:</h5>
-                                    <p>54B, Tailstoi Town 5238
-                                    La city, IA 522364</p>
-                                </div>
-
-                                <div class="phone-email">
-                                    <div class="phone">
-                                        <a href="tel:01372.466.790">Phone :
-                                            <span> 01372.466.790</span>
-                                        </a>
-                                    </div>
-                                    <div class="email">
-                                        <a href="mailto:info@cakebakery.com">Email :
-                                            <span> info@cakebakery.com</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="open-time">
-                                    <h5>Opening Hours :</h5>
-                                    <p> 8:00 AM – 10:00 PM <br>
-                                        Monday – Sunday</p>
+                                <div class="chef-text text-center">
+                                    <h5>Michale Joe</h5>
+                                    <p class="m-0"><i>Expert in Cake Making</i></p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Map -->
-            <section class="map mb-100">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="location">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6304.829986131271!2d-122.4746968033092!3d37.80374752160443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808586e6302615a1%3A0x86bd130251757c00!2sStorey+Ave%2C+San+Francisco%2C+CA+94129!5e0!3m2!1sen!2sus!4v1435826432051" width="100%" height="500" frameborder="0" style="border: 0px; pointer-events: none;" allowfullscreen=""></iframe>
+                        <div class="col-3">
+                            <div class="chef-card text-center">
+                                <div class="chef-img">
+                                    <img src="./assets/images/home/chefs/chef-2.png" alt="Chef Image">
+                                    <ul class="d-flex align-items-center justify-content-start column-gap-4">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-skype"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="chef-text text-center">
+                                    <h5>Roger B.</h5>
+                                    <p class="m-0"><i>Expert in Cupcakes Making</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="chef-card text-center">
+                                <div class="chef-img">
+                                    <img src="./assets/images/home/chefs/chef-3.png" alt="Chef Image">
+                                    <ul class="d-flex align-items-center justify-content-start column-gap-4">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-skype"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="chef-text text-center">
+                                    <h5>Mark J.</h5>
+                                    <p class="m-0"><i>Expert in Chocolate Making</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            
+                        </div>
+                        <div class="col-3">
+                            <div class="chef-card text-center">
+                                <div class="chef-img">
+                                    <img src="./assets/images/home/chefs/chef-1.png" class="img-fluid" alt="Chef Image">
+                                    <ul class="d-flex align-items-center justify-content-start column-gap-4">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-skype"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="chef-text text-center">
+                                    <h5>Michale Joe</h5>
+                                    <p class="m-0"><i>Expert in Cake Making</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="chef-card text-center">
+                                <div class="chef-img">
+                                    <img src="./assets/images/home/chefs/chef-2.png" alt="Chef Image">
+                                    <ul class="d-flex align-items-center justify-content-start column-gap-4">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-skype"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="chef-text text-center">
+                                    <h5>Roger B.</h5>
+                                    <p class="m-0"><i>Expert in Cupcakes Making</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="chef-card text-center">
+                                <div class="chef-img">
+                                    <img src="./assets/images/home/chefs/chef-3.png" alt="Chef Image">
+                                    <ul class="d-flex align-items-center justify-content-start column-gap-4">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-brands fa-skype"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="chef-text text-center">
+                                    <h5>Mark J.</h5>
+                                    <p class="m-0"><i>Expert in Chocolate Making</i></p>
+                                </div>
                             </div>
                         </div>
                     </div>

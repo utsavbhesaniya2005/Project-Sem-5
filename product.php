@@ -81,22 +81,22 @@
                                   </li>
                                   <hr>
                                   <li>
-                                      <a class="dropdown-item" href="#">Our Chefs</a>
+                                      <a class="dropdown-item" href="./ourchefs.php">Our Chefs</a>
                                   </li>
                                   <hr>
                               </ul>
                           </li>
                           <li class="nav-item ms-auto">
-                              <a class="nav-link" href="#">Services</a>
+                              <a class="nav-link" href="./service.php">Services</a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link" href="#">Shop</a>
+                              <a class="nav-link" href="./offer.php">What We Offer</a>
                           </li>
                           <li class="nav-item">
                               <a class="nav-link" href="./contact.php">Contact Us</a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link" href="#">Log In</a>
+                              <a class="nav-link" href="./login.php">Log In</a>
                           </li>
                       </ul>
                   </nav>
