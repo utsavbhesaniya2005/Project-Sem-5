@@ -29,6 +29,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
+    <style>
+        .fpass{
+            display: block;
+            color: #0dd3f7;
+            text-align: end;
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 24px;
+            letter-spacing: 1.5px;
+        }
+        .form-control{
+            color: #0dd3f7 !important;
+        }
+    </style>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cake - Bakery</title>
@@ -118,7 +133,7 @@
 
 
         <!-- Login-area -->
-        <div class="login-area">
+        <div class="login-area" style="height: 85vh;">
 
             <video autoplay loop muted plays-inline class="clip" src="./assets/images/login/login-bg.mp4"></video>
 
@@ -126,7 +141,8 @@
                 <h1>Login</h1>
                 <form method="POST" action="./login.php">
                     <input type="email" name="email" placeholder="Enter Email Address" class="form-control my-3">
-                    <input type="password" name="password" placeholder="Enter Password" class="form-control mb-5">
+                    <input type="password" name="password" placeholder="Enter Password" class="form-control mb-4">
+                    <a href="./forgotpass.php" class="fpass">Forgot Password?</a>
                     <input type="submit" name="submit" value="Submit" class="submit"> 
                 </form>
                 <p>Not have an account? <a href="./register.php"> SignUp Here</a></p>

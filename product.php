@@ -140,8 +140,8 @@
                           <hr class='m-0 m-1'>
                           <hr class='m-0 p-1'>
                           <div class='product-price'>
-                            <span class='current-price'>Rs $row[3]</span>
-                            <span class='original-price'>Rs $row[2]</span>
+                            <span class='current-price'>Rs $row[2]</span>
+                            <span class='original-price'>Rs $row[3]</span>
                             <span class='discount'>$row[4]% OFF</span>
                           </div>
                           <hr class='m-0 mt-1'>

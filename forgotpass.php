@@ -1,26 +1,44 @@
-<?php include "./connect.php"; ?>
+<?php
+    session_start();
+    include "./connect.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <style>
-            .form-control{
-                color: #0dd3f7 !important;
-            }
-        </style>
+
+    <style>
+        .fpass{
+            display: block;
+            color: #0dd3f7;
+            text-align: end;
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 24px;
+            letter-spacing: 1.5px;
+        }
+        .form-control{
+            color: #0dd3f7 !important;
+        }
+    </style>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cake - Bakery</title>
 
+        <!-- Bootstrap -->
         <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 
+        <!-- Style -->
         <link rel="stylesheet" href="./assets/css/style.css">
 
+        <!-- Login Css -->
         <link rel="stylesheet" href="./assets/css/login.css">
+
     </head>
+
     <body>
 
         <!-- Header  -->
-        <header>
+        <header style="z-index: 999;">
             <div class="container">
                 <div class="row justify-content-between align-items-center">
                     <div class="col-2">
@@ -37,7 +55,7 @@
                             </button>
                             <ul class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="./index.php">Home</a>
+                                    <a class="nav-link" href="./index.php">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="./product.php">All Products</a>
@@ -69,7 +87,7 @@
                                     <a class="nav-link" href="./contact.php">Contact Us</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link">Log In</a>
+                                    <a class="nav-link active">Log In</a>
                                     <ul class="dropdown-menu-1">
                                         <hr>
                                         <li>
@@ -89,20 +107,20 @@
             </div>
         </header>
 
+
+        <!-- Login-area -->
         <div class="login-area" style="height: 85vh;">
 
             <video autoplay loop muted plays-inline class="clip" src="./assets/images/login/login-bg.mp4"></video>
 
             <div class="login">
-                <h1>Register</h1>
-                <form method="POST" action="./register.php">
-                    <input type="text" name="name" placeholder="Enter Your Full Name" class="form-control mt-4 mb-3"  required>
-                    <input type="email" name="email" placeholder="Enter Your Email" class="form-control my-3" required>
-                    <input type="password" name="pass" placeholder="Enter Password" class="form-control my-3" required>
-                    <input type="password" name="cpass" placeholder="Enter Confirm Password" class="form-control mb-5" required>
-                    <input type="submit" name="login" value="Submit" class="submit"> 
+                <h1>Update Password</h1>
+                <form method="POST" action="./forgotpass.php">
+                    <input type="email" name="email" placeholder="Enter Email Address" class="form-control my-3">
+                    <input type="password" name="opass" placeholder="Enter Old Password" class="form-control mb-3">
+                    <input type="password" name="npass" placeholder="Enter New Password" class="form-control mb-5">
+                    <input type="submit" name="submit" value="Submit" class="submit mt-5"> 
                 </form>
-                <p>Already have an account? <a href="./login.php">Login</a> Here</p>
             </div>
         </div>
     </body>
@@ -113,26 +131,30 @@
 
 <?php
 
-    if(isset($_REQUEST['login'])){
+    if(isset($_REQUEST['submit'])){
 
-        $name = $_POST['name'];
         $email = $_POST['email'];
-        $pass = $_POST['pass'];
+        $old_pass = $_POST['opass'];
+        $new_pass = $_POST['npass'];
 
-        $sql = mysqli_query($conn, "insert into registeruser(name, email, pass) values ('$name', '$email', '$pass')");
-        
-        if($pass == $cpass){
-            
-            header("location:login.php");
+
+        $fpass = mysqli_query($conn, "select pass from registeruser where email = '$email'");
+
+        if(mysqli_num_rows($fpass) == 1){
+
+            $update_pass = mysqli_query($conn, "update registeruser set pass = '$new_pass' where email = '$email'");
+
+            if($update_pass){
+
+                echo "<script>alert('Password Updated Successfully.')</script>";
+                header("location:./login.php");
+            }else{
+                echo "<script>alert('Failed To Updated Successfully.</script>";
+            }
+
         }else{
             
-            echo "<h1>Password And Confirm Password Does Not Match</h1>";
-        }
-        
-
-        if($sql){
-
-            header("location: ./login.php");
+            echo "<script>alert('Username Or Old Password Must Be Wrong..!!');</script>";
         }
 
     }
