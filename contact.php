@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    include "./connect.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -135,21 +139,21 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-6">
-                            <form class="row g-3">
+                            <form class="row g-3" action="./contact.php" method="post">
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control py-3 px-3 mb-4" placeholder="Your Name">
+                                    <input type="text" class="form-control py-3 px-3 mb-4" placeholder="Your Name" name="name">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" class="form-control py-3 px-3" placeholder="Email Address">
+                                    <input type="email" class="form-control py-3 px-3" placeholder="Email Address" name="email">
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" class="form-control py-3 px-3 mb-4" placeholder="Subject">
+                                    <input type="text" class="form-control py-3 px-3 mb-4" placeholder="Subject" name="subject">
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control py-2 px-3 mb-5" placeholder="Write Message" cols="30" rows="7"></textarea>
+                                    <textarea class="form-control py-2 px-3 mb-5" placeholder="Write Message" cols="30" rows="7" name="message"></textarea>
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" class="btn py-3 px-3">Submit now</button>
+                                    <button type="submit" class="btn py-3 px-3" name="submit">Submit now</button>
                                 </div>
                             </form>
                         </div>
@@ -409,3 +413,24 @@
 
     </body>
 </html>
+<?php
+
+    if(isset($_REQUEST['submit'])){
+
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $subject = $_POST['subject'];
+        $message = $_POST['message'];
+
+        $sql = mysqli_query($conn, "insert into contact(name, email, subject, message) values ('$name', '$email', '$subject', '$message')");
+
+        if($sql){
+
+            echo "<script>alert('Feedback Submmited.')</script>";
+            header("location: ./index.php");
+            exit();
+        }
+
+    }
+
+?>
